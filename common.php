@@ -5,6 +5,8 @@
 * @copyright (c) 2016 Mark D. Hamill (mark@phpbbservices.com)
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 * @french localisation by Philippe Bonnaure - Mac V.F - www.macvf.fr
+************************************************************************************
+* 12/01/17 : Initial localization
 *
 */
 
