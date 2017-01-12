@@ -1,0 +1,9 @@
+Bonjour {USERNAME},
+
+Nous vous signalons qu'un administrateur du forum {FORUM_NAME} a édité les réglages de votre résumé. Afin de voir les nouveaux réglages du résumé, utilisez le lien ci-dessous et cliquez sur le lien du résumé :
+
+{DIGESTS_UCP_LINK}
+
+Cordialement,
+
+L'équipe d'administration du forum {FORUM_NAME}
