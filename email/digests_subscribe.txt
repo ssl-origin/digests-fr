@@ -1,6 +1,6 @@
 Bonjour {USERNAME},
 
-Nous vous signalons qu'un administrateur du forum {FORUM_NAME} vous a abonné pour recevoir  un résumé {DIGESTS_TYPE} {DIGESTS_FORMAT} digest. Si vous ne souhaitez pas recevoir le résumé, vous pouvez vous désabonner en sélectionnant l'onglet Résumé dans le panneau de contrôle de l'utilisateur du forum. Une fois que vous vous serez connectés, sélectionnez l'option Aucun (Désabonner) dans la rubrique Réglages généraux qui est accessible directement par ce lien :
+Nous vous signalons qu'un administrateur du forum {FORUM_NAME} vous a abonné pour recevoir  un résumé {DIGESTS_TYPE} {DIGESTS_FORMAT}. Si vous ne souhaitez pas recevoir le résumé, vous pouvez vous désabonner en sélectionnant l'onglet Résumé dans le panneau de contrôle de l'utilisateur du forum. Une fois que vous vous serez connectés, sélectionnez l'option Aucun (Désabonner) dans la rubrique Réglages généraux qui est accessible directement par ce lien :
 
 {DIGESTS_UCP_LINK}
 
