@@ -40,7 +40,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_DATE'						=> 'Date',
 	'DIGESTS_DELIMITER'					=> ' :: ', // Utilisé pour aider à afficher la hiérarchie des noms de forum depuis l'index jusqu'en bas
 	'DIGESTS_DISABLED_MESSAGE'			=> 'Pour activer les champs, sélectionnez Réglages généraux et sélectionnez le type de résumé',
-	'DIGESTS_DISCLAIMER'				=> 'Ce résumé est envoyé aux membres enregistrés des forums de <a href="%1$s">%2$s</a>. Vous pouvez modifier ou supprimer votre abonnement aux forums depuis le <a href="%1$sucp.%2$s">Panneau de contrôle de l&apos;utilisateur</a>. Si vous avez des questions ou si vous souhaitez nous contacter veuillez adresser votre courriel au <a href="mailto:%1$s?subject=Digests">webmaster des forums de %2$s</a>.',
+	'DIGESTS_DISCLAIMER'				=> 'Ce résumé est envoyé aux membres enregistrés des forums de <a href="%1$s">%2$s</a>. Vous pouvez modifier ou supprimer votre abonnement aux forums depuis le <a href="%1$sucp.%3$s">Panneau de contrôle de l&apos;utilisateur</a>. Si vous avez des questions ou si vous souhaitez nous contacter veuillez adresser votre courriel au <a href="mailto:%4$s?subject=Digests">webmaster des forums de %2$s</a>.',
 	'DIGESTS_EXPLANATION'				=> 'Les résumés qui sont envoyés périodiquement sont constitués à partir des posts réalisés sur le forum. Les résumés peuvent être envoyés à une récurence journalière, hebdomadaire ou mensuelle et à une heure que vous choisisisez. Vous pouvez spécifier les forums dont les posts vous intéressent plus particulièrement, ou par défaut, vous pouvez sélectionner choisir de recevoir tous les posts de tous les forums. Vous pouvez annuler votre abonnement à tout moment en revenant sur cette page. Nombreux sont les utilisateurs qui trouvent ces résumés très utiles. Nous vous encourageons à faire un essai !',
 	'DIGESTS_FILTER_ERROR'				=> 'Le générateur de courriels a été appelé avec un user_digest_filter_type = %s invalide',
 	'DIGESTS_FILTER_FOES'				=> 'Retirer les posts émis par les Ignorés dans le résumé',
@@ -93,10 +93,10 @@ $lang = array_merge($lang, array(
 	'DIGESTS_OPEN_QUOTE_TEXT'			=> '"',
 	'DIGESTS_PM'						=> ' PM', // non utilisé si les formats date/heure ne pemettent pas AM et PM
 	'DIGESTS_PM_SUBJECT'				=> 'Sujet du message privé',
-	'DIGESTS_POST_IMAGE_TEXT'			=> '<br />(Cliquez sur l&apos;image pour l&apos;afficher en taille réelle.)',
+	'DIGESTS_POST_IMAGE_TEXT'			=> '<br>(Cliquez sur l&apos;image pour l&apos;afficher en taille réelle.)',
 	'DIGESTS_POST_TEXT'					=> 'Texte du post', 
 	'DIGESTS_POST_TIME'					=> 'Date', 
-	'DIGESTS_POST_SIGNATURE_DELIMITER'	=> '<br />____________________<br />', // Placez ici du code HTML (assurez-vous qu'il s'agisse de code HTML valide) que vous souhaitez utiliser pour délimiter la fin d&apos;un post du début de la ligne de signature
+	'DIGESTS_POST_SIGNATURE_DELIMITER'	=> '<br>____________________<br>', // Placez ici du code HTML que vous souhaitez utiliser pour délimiter la fin d&apos;un post du début de la ligne de signature (assurez-vous qu'il s'agisse de code HTML valide)
 	'DIGESTS_POSTED_TO_THE_TOPIC'		=> 'posté sur le sujet',
 	'DIGESTS_POSTS_TYPE_ANY'			=> 'Tous les posts',
 	'DIGESTS_POSTS_TYPE_FIRST'			=> 'Le premier post des sujets',
@@ -111,7 +111,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_ROBOT'						=> 'Robot',
 	'DIGESTS_SALUTATION' 				=> 'Bonjour',
 	'DIGESTS_SELECT_FORUMS'				=> 'Inclure les posts des forums suivants',
-	'DIGESTS_SELECT_FORUMS_EXPLAIN'		=> 'Veuillez noter que les catégories et les forums affichés sont uniquement ceux que vous êtes autorisés à lire. Le choix des forums est désactivé lorsque vous sélectionnez &ldquo;Les sujets cochés seulement&rdquo;. Les forums dont les accès sont protégés par mot de passe ne sont pas affichés et ne peuvent pas être sélectionnés. Vous devez cocher au moins un forum lorsque l&apos;option &ldquo;Tous&rdquo; est décochée et qu&apos;aucun forum n&apos;est coché, afin de pouvoir soumettre correctement votre paramétrage.<br /><br />Les forums dont les noms sont affichés en caractères gras (lorsqu&apos;il y en a) sont des forums que l&apos;administrateur force à afficher dans tous les résumés (autres que les seuls sujets cochés). Vous ne pouvez pas déselectionner ces forums. Les forums dont les noms sont barrés ne sont pas autorisés, par l&apos;administrateur, à être affichés dans un résumé (autres que les seuls sujets cochés) et sont de ce fait décochés.',
+	'DIGESTS_SELECT_FORUMS_EXPLAIN'		=> 'Veuillez noter que les catégories et les forums affichés sont uniquement ceux que vous êtes autorisés à lire. Le choix des forums est désactivé lorsque vous sélectionnez &ldquo;Les sujets cochés seulement&rdquo;. Les forums dont les accès sont protégés par mot de passe ne sont pas affichés et ne peuvent pas être sélectionnés. Vous devez cocher au moins un forum lorsque l&apos;option &ldquo;Tous&rdquo; est décochée et qu&apos;aucun forum n&apos;est coché, afin de pouvoir soumettre correctement votre paramétrage.<br><br>Les forums dont les noms sont affichés en caractères gras (lorsqu&apos;il y en a) sont des forums que l&apos;administrateur force à afficher dans tous les résumés (autres que les seuls sujets cochés). Vous ne pouvez pas déselectionner ces forums. Les forums dont les noms sont barrés ne sont pas autorisés, par l&apos;administrateur, à être affichés dans un résumé (autres que les seuls sujets cochés) et sont de ce fait décochés.',
 	'DIGESTS_SEND_HOUR' 				=> 'Heure d&apos;envoi',
 	'DIGESTS_SEND_HOUR_EXPLAIN'			=> 'L&apos;heure de réception du courriel contenant votre résumé est déterminée à partir du fuseau horaire que vous avez défini dans l&apos;onglet Préférences du forum.',
 	'DIGESTS_SEND_IF_NO_NEW_MESSAGES'	=> 'Envoyer le résumé s&apos;il n&apos;y a pas de nouveaux messages :',

@@ -23,6 +23,12 @@ $config = $phpbb_container->get('config');
 $helper = $phpbb_container->get('phpbbservices.digests.common');
 
 $lang = array_merge($lang, array(
+	'DIGESTS_WEEKDAY' 					=> 'Dimanche,Lundi,Mardi,Mercredi,Jeudi,Vendredi,Samedi',
+));
+
+$weekdays = explode(',', $lang['DIGESTS_WEEKDAY']);
+
+$lang = array_merge($lang, array(
 	'PLURAL_RULE'											=> 2,
 	
 	'DIGESTS_ALL'											=> 'Tous',
@@ -61,6 +67,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_EXCLUDE_FORUMS'								=> 'Toujours exclure les forums suivants',
 	'DIGESTS_EXCLUDE_FORUMS_EXPLAIN'						=> 'Saisissez le forum_id des forums qui ne doivent pas figurer dans le résumé. Séparez les forum_id par des virgules. En indiquant 0, aucun forum ne sera exclu. Pour déterminer le forum_id d&apos;un forum, observez la valeur du paramètre &ldquo;f&rdquo; dans le champ de l&apos;URL. C&apos;est le forum_id. Exemple: http://www.example.com/phpBB3/viewforum.php?f=1. Ne pas utiliser de forum_ids qui correspondent à des catégories. <i>Ce réglage est ignoré si l&apos;option Sujets cochés seulement est cochée par l&apos;utilisateur.</i>',
 	'DIGESTS_EXPAND'										=> 'Agrandir',
+	'DIGESTS_FREQUENCY_EXPLAIN'								=> 'Les résumés hebdomadaires sont envoyés le ' . $weekdays[$config['phpbbservices_digests_weekly_digest_day']] . '. Les résumés mensuels sont envoyés le premier du mois. Le Temps Universel Coordonné  (UTC) est utilisé pour déterminer le jour de la semaine.',
 	'DIGESTS_FORMAT_FOOTER' 								=> 'Format du résumé',
 	'DIGESTS_FROM_EMAIL_ADDRESS'							=> 'Adresse électronique utilisée pour expédier les résumés',
 	'DIGESTS_FROM_EMAIL_ADDRESS_EXPLAIN'					=> 'Lorsque les utilisateurs recoivent un résumé, cette adresse électronique va s&apos;afficher dans le champ &ldquo;De&rdquo;. S&apos;il est laissé vide, l&apos;adresse électronique de votre Forum sera utilisé par défaut. Faites attention lorsque vous utilisez une adresse électronique dont le domaine ne correspond pas à celui sur lequel est hébergé votre Forum, dans la mesure où votre serveur de courriels ou le serveur de courriels des utilisateurs pourra interprêter le courriel comme étant du spam.',
@@ -113,7 +120,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_RESET_CRON_RUN_TIME_EXPLAIN'					=> 'La réintialisation du générateur de courriels, entraîne la suppression de tous les résumés stockés dans la file d&apos;attente. Aussi, lors de son premier lancement après la réinitialisation, seuls les résumés de l&apos;heure courante seront générés. La réinitialisation peut être utile lorsque vous avez terminé de tester les résumés ou si le cron phpBB n&apos;a pas fonctionné depuis un certain temps.',
 	'DIGESTS_RUN_TEST'										=> 'Lancer le générateur de courriels',
 	'DIGESTS_RUN_TEST_CLEAR_SPOOL'							=> 'Effacer le répertoire cache/phpbbservices/digests',
-	'DIGESTS_RUN_TEST_CLEAR_SPOOL_ERROR'					=> 'Impossible de supprimer tous les fichiers dans le répertoire cache/phpbbservices/digests. Cela est peut-être dû à des problèmes de permissions. Les permissions de fichier du répertoire doivent être réglées sur écriture publique (777 sur les systèmes Unix).',
+	'DIGESTS_RUN_TEST_CLEAR_SPOOL_ERROR'					=> 'Impossible de supprimer tous les fichiers dans le répertoire cache/phpbbservices/digests. Cela est peut-être dû à des problèmes de permissions ou parce que le répertoire a été supprimé. Les permissions de fichier du répertoire doivent être réglées sur écriture publique (777 sur les systèmes Unix).',
 	'DIGESTS_RUN_TEST_CLEAR_SPOOL_EXPLAIN'					=> 'Si vous choisissez Oui, tous les fichiers dans le répertoire cache/phpbbservices/digests seront effacés. C&apos;est une bonne chose à faire pour s&apos;assurer que les précédents résumés ne soient plus accessibles. Cette action est réalisée avant que tout nouveau résumé ne soit écrit dans ce répertoire.',
 	'DIGESTS_RUN_TEST_DAY'									=> 'Simulation du jour dans le mois',
 	'DIGESTS_RUN_TEST_DAY_EXPLAIN'							=> 'Saisissez un nombre entier entre 1 et 31. Si l&apos;année, le mois et le jour sont dans le futur aucun résumé ne sera généré. N&apos;utilisez pas un jour qui logiquement n&apos;appartient pas au mois sélectionné plus  haut, comme le 31 Février.',
@@ -155,6 +162,8 @@ $lang = array_merge($lang, array(
 	'DIGESTS_UNSUBSCRIBE_SUBJECT'							=> 'Vous avez été désabonnés de la réception par courriels du résumé',
 	'DIGESTS_UNSUBSCRIBED'									=> 'Les non abonnés',
 	'DIGESTS_USER_DIGESTS_CHECK_ALL_FORUMS'					=> 'Envoyer tous les forums dans le résumé',
+	'DIGESTS_USER_DIGESTS_MAX_DISPLAY_WORDS'				=> 'Nombre maximum de mots à afficher dans un post',
+	'DIGESTS_USER_DIGESTS_MAX_DISPLAY_WORDS_EXPLAIN'		=> 'Saisir -1 pour afficher l&apos;intégralité du texte du post par défaut. Saisir zéro (0) signifie que l&apos;utilisateur ne verra pas du tout le texte du post.',	
 	'DIGESTS_USER_DIGESTS_PM_MARK_READ'						=> 'Marquer les messages privés comme lus lorsqu&apos;ils apparaissent dans le résumé',
 	'DIGESTS_USER_DIGESTS_REGISTRATION'						=> 'Autoriser l&apos;utlisateur à s&apos;abonner au résumé au moment de l&apos;enregistrement',
 	'DIGESTS_USERS_PER_PAGE'								=> 'Nombre d&apos;abonnés par page',
