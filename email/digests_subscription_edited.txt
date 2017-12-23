@@ -1,9 +1,9 @@
-Bonjour {USERNAME},
+Dear {{ USERNAME }},
 
-Nous vous signalons qu'un administrateur du forum {FORUM_NAME} a édité les réglages de votre résumé. Afin de voir les nouveaux réglages du résumé, utilisez le lien ci-dessous et cliquez sur le lien du résumé :
+This is to notify you that an administrator of {{ FORUM_NAME }} has edited your digest settings. To view your new digest settings, use the link below and click on the digests link:
 
-{DIGESTS_UCP_LINK}
+{{ DIGESTS_UCP_LINK }}
 
-Cordialement,
+Sincerely,
 
-L'équipe d'administration du forum {FORUM_NAME}
+{{ FORUM_NAME }} Administration Team

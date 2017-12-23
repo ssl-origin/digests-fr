@@ -1,7 +1,7 @@
-Bonjour {USERNAME},
+Dear {{ USERNAME }},
 
-Nous vous signalons qu'un administrateur du forum {FORUM_NAME} vous a désabonné du résumé envoyé par courriel.
+This is to notify you that an administrator of {{ FORUM_NAME }} has unsubscribed you from receiving an email digest.
 
-Cordialement,
+Sincerely,
 
-L'équipe d'administration du forum {FORUM_NAME}
+{{ FORUM_NAME }} Administration Team

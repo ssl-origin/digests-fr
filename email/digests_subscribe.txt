@@ -1,9 +1,9 @@
-Bonjour {USERNAME},
+Dear {{ USERNAME }},
 
-Nous vous signalons qu'un administrateur du forum {FORUM_NAME} vous a abonné pour recevoir  un résumé {DIGESTS_TYPE} {DIGESTS_FORMAT}. Si vous ne souhaitez pas recevoir le résumé, vous pouvez vous désabonner en sélectionnant l'onglet Résumé dans le panneau de contrôle de l'utilisateur du forum. Une fois que vous vous serez connectés, sélectionnez l'option Aucun (Désabonner) dans la rubrique Réglages généraux qui est accessible directement par ce lien :
+This is to notify you that an administrator of {{ FORUM_NAME }} has subscribed you to receive a {{ DIGESTS_TYPE }} {{ DIGESTS_FORMAT }} digest. If you do not wish to receive the digest, you can unsubscribe by selecting the digests tab in the user control panel of the forum. Once logged in, select the unsubscribe option. It is accessible through this convenient link:
 
-{DIGESTS_UCP_LINK}
+{{ DIGESTS_UCP_LINK }}
 
-Cordialement,
+Sincerely,
 
-L'équipe d'administration du forum {FORUM_NAME}
+{{ FORUM_NAME }} Administration Team
