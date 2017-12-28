@@ -75,7 +75,7 @@ $lang = array_merge($lang, array(
 															),
 	'LOG_CONFIG_DIGESTS_LOG_ENTRY_NONE'						=> '<strong>Le résumé n&apos;a PAS été envoyé à %1$s (%2$s) car le réglage de ses filtres et de ses préférences font qu&apos;il n&apos;y avait rien à envoyer.</strong>',
 	'LOG_CONFIG_DIGESTS_LOG_ENTRY_NONE_NO_EMAIL'			=> '<strong>Le résumé n&apos;a PAS été envoyé à %s car le réglage de ses filtres et de ses préférences font qu&apos;il n&apos;y avait rien à envoyer.</strong>',
-	'LOG_CONFIG_DIGESTS_LOG_START'							=> '<strong>Démarrage du générateur de courriels.</strong>',
+	'LOG_CONFIG_DIGESTS_LOG_START'							=> '<strong>Lancement du générateur de courriels.</strong>',
 	'LOG_CONFIG_DIGESTS_LOG_END'							=> '<strong>Arrêt du générateur de courriels.</strong>',
 	'LOG_CONFIG_DIGESTS_MAILER_RAN_WITH_ERROR'				=> '<strong>Une erreur est survenue alors que le générateur de courriel était démarré. Un ou plusieurs résumés ont peut-être pu être générés avec succès.</strong>',
 	'LOG_CONFIG_DIGESTS_MANUAL_RUN'							=> '<strong>Demande de lancement manuel du générateur de courriels</strong>',

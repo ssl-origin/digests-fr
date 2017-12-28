@@ -1,9 +1,9 @@
-Dear {{ USERNAME }},
+Bonjour {{ USERNAME }},
 
-This is to notify you that an administrator of {{ FORUM_NAME }} has subscribed you to receive a {{ DIGESTS_TYPE }} {{ DIGESTS_FORMAT }} digest. If you do not wish to receive the digest, you can unsubscribe by selecting the digests tab in the user control panel of the forum. Once logged in, select the unsubscribe option. It is accessible through this convenient link:
+Ce message est destiné à vous prévenir qu'un administrateur du forum {{ FORUM_NAME }} vous a abonné pour recevoir un résumé {{ DIGESTS_TYPE }} {{ DIGESTS_FORMAT }}. Si vous ne souhaitez pas recevoir le résumé, vous pouvez vous désabonné en sélectionnant l'onglet Résumés dans le panneau de contrôle de l'utilisateur du forum. Une fois connecté, sélectionnez Aucun dans l'option Fréquence d'envoi du résumé. Elle est accessible via le lien suivant :
 
 {{ DIGESTS_UCP_LINK }}
 
-Sincerely,
+Cordialement,
 
-{{ FORUM_NAME }} Administration Team
+L'équipe d'administration du forum {{ FORUM_NAME }}
