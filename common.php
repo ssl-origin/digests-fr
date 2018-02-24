@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB Extension - Digests
-* @copyright (c) 2017 Mark D. Hamill (mark@phpbbservices.com)
+* @copyright (c) 2018 Mark D. Hamill (mark@phpbbservices.com)
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -139,7 +139,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_TRANSLATED_BY'				=> 'Traduit par',
 	'DIGESTS_TRANSLATOR_NAME'			=> 'Philippe Bonnaure - www.macvf.fr',	// Leave null string to suppress translator name
 	'DIGESTS_TRANSLATOR_CONTACT'		=> 'https://www.macvf.fr',	// Leave null string to suppress contact info, if used use: mailto:name@emailaddress.com or a URL if you have a website.
-	'DIGESTS_TOC'						=> 'Afficher le sommaire',
+	'DIGESTS_TOC'						=> 'Sommaire',
 	'DIGESTS_TOC_EXPLAIN'				=> 'Si le forum est très actif, vous pouvez inclure un sommaire dans votre résumé. Dans les résumés HTML, le sommaire comporte des liens qui permettent d&apos;aller à un post en particulier ou à un message privé dans le résumé.',
 	'DIGESTS_UNKNOWN'					=> 'Inconnu',
 	'DIGESTS_UNREAD'					=> 'Non lu',

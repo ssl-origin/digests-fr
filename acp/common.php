@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB Extension - Digests
-* @copyright (c) 2017 Mark D. Hamill (mark@phpbbservices.com)
+* @copyright (c) 2018 Mark D. Hamill (mark@phpbbservices.com)
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -111,7 +111,6 @@ $lang = array_merge($lang, array(
 																	1 => 'Pendant l&apos;équilibrage, %d résumé d&apos;abonné au total a eu son heure d&apos;envoi de résumé modifiée.',
 																	2 => 'Pendant l&apos;équilibrage, %d résumés d&apos;abonné au total ont eu leur heure d&apos;envoi de résumé modifiée.',
 															),
-	'DIGESTS_REFRESH'										=> 'Actualiser',
 	'DIGESTS_REGISTRATION_FIELD'							=> 'Proposer aux utilisateurs de s&apos;abonner au résumé lorqu&apos;ils s&apos;enregistrent',
 	'DIGESTS_REGISTRATION_FIELD_EXPLAIN'					=> 'Lorsque l&apos;option est activée, les utilisateurs peuvent au moment de leur enregistrement sur le forum, s&apos;abonner au service d&apos;envoi du résumé. Les réglages par défaut du forum seront appliqués. La proposition d&apos;abonnement ne s&apos;affiche pas lorsque l&apos;option Abonnement automatique est activé.',
 	'DIGESTS_REPLY_TO_EMAIL_ADDRESS'						=> 'Adresse de réponse au couriel',
@@ -121,7 +120,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_RUN_TEST'										=> 'Lancer le générateur de courriels',
 	'DIGESTS_RUN_TEST_CLEAR_SPOOL'							=> 'Effacer le répertoire cache/phpbbservices/digests',
 	'DIGESTS_RUN_TEST_CLEAR_SPOOL_ERROR'					=> 'Impossible de supprimer tous les fichiers dans le répertoire cache/phpbbservices/digests. Cela est peut-être dû à des problèmes de permissions ou parce que le répertoire a été supprimé. Les permissions de fichier du répertoire doivent être réglées sur écriture publique (777 sur les systèmes Unix).',
-	'DIGESTS_RUN_TEST_CLEAR_SPOOL_EXPLAIN'					=> 'Si vous choisissez Oui, tous les fichiers dans le répertoire cache/phpbbservices/digests seront effacés. C&apos;est une bonne chose à faire pour s&apos;assurer que les précédents résumés ne soient plus accessibles. Cette action est réalisée avant que tout nouveau résumé ne soit écrit dans ce répertoire.',
+	'DIGESTS_RUN_TEST_CLEAR_SPOOL_EXPLAIN'					=> 'Si vous choisissez Oui, tous les fichiers dans le répertoire cache/phpbbservices/digests seront effacés. C&apos;est une bonne chose à faire pour s&apos;assurer que les précédents résumés ne soient plus accessibles. Il est conseillé d&apos;utiliser cette option lorsque vous avez terminé de traiter les problèmes, dans la mesure où ce dossier est accessible au public  Cette action est réalisée avant que tout nouveau résumé ne soit écrit dans ce répertoire. Veuillez noter que cette option peut être exécutée à tout moment pour effacer le contenu de ce répertoire. Elle fonctionne que vous ayez ou non lancé le générateur de courriels, en considérant que vous ayez soumis ce formulaire.',
 	'DIGESTS_RUN_TEST_DAY'									=> 'Simulation du jour dans le mois',
 	'DIGESTS_RUN_TEST_DAY_EXPLAIN'							=> 'Saisissez un nombre entier entre 1 et 31. Si l&apos;année, le mois et le jour sont dans le futur aucun résumé ne sera généré. N&apos;utilisez pas un jour qui logiquement n&apos;appartient pas au mois sélectionné plus  haut, comme le 31 Février.',
 	'DIGESTS_RUN_TEST_EMAIL_ADDRESS'						=> 'Adresse électronique de test',
@@ -140,7 +139,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_RUN_TEST_YEAR'									=> 'Simulation de l&apos;année',
 	'DIGESTS_RUN_TEST_YEAR_EXPLAIN'							=> 'Les années de 2000 à 2030 sont autorisées. Normalement le réglage doit correspondre à l&apos;année courante. Si l&apos;année est dans le futur, aucun résumé ne sera généré.',
 	'DIGESTS_SEARCH_FOR_MEMBER'								=> 'Rechercher des membres',
-	'DIGESTS_SEARCH_FOR_MEMBER_EXPLAIN'						=> 'Saisissez tout ou partie du nom du membre à rechercher puis pressez Actualiser. Laissez vide pour voir tous les membres. Les recherches ne sont pas sensibles à la casse.',
+	'DIGESTS_SEARCH_FOR_MEMBER_EXPLAIN'						=> 'Saisissez tout ou partie du nom du membre à rechercher puis pressez Retour ou Entrée. Laissez vide pour voir tous les membres. Les recherches ne sont pas sensibles à la casse.',
 	'DIGESTS_SELECT_FORUMS_ADMIN_EXPLAIN'					=> 'Seuls les forums que l&apos;utilisateur est autorisé à lire sont affichés dans la liste. Si vous souhaitez donner aux utilisateurs des accès à d&apos;autres forums non affichés ici, étendez leur permission d&apos;utilisateur du forum ou de groupe. Notez que vous pouvez aussi ajuster les forums qui apparaissent dans leur résumé. Si leur type de résumé est &ldquo;Aucun&rdquo; aucun résumé ne leur sera envoyé.',
 	'DIGESTS_SHOW'											=> 'Afficher',
 	'DIGESTS_SHOW_EMAIL'									=> 'Afficher l&apos;adresse électronique dans le journal',

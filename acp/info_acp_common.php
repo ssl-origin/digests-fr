@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB Extension - Digests
-* @copyright (c) 2017 Mark D. Hamill (mark@phpbbservices.com)
+* @copyright (c) 2018 Mark D. Hamill (mark@phpbbservices.com)
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -22,8 +22,6 @@ global $phpbb_container;
 $config = $phpbb_container->get('config');
 $helper = $phpbb_container->get('phpbbservices.digests.common');
 
-$server_settings_url = append_sid('index.php?i=acp_board&amp;mode=server');
-
 $lang = array_merge($lang, array(
 
 	'PLURAL_RULE'											=> 2,
@@ -31,7 +29,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_DIGESTS'										=> 'Digests',
 	'ACP_DIGESTS_SETTINGS'									=> 'Réglages Digest',
 	'ACP_DIGESTS_GENERAL_SETTINGS'							=> 'Réglages généraux',
-	'ACP_DIGESTS_GENERAL_SETTINGS_EXPLAIN'					=> 'Cette rubrique présente les réglages généraux de Digests, un service permettant de générer un résumé des posts publiés sur vos forums. Veuillez noter que si les résumés doivent être délivrés rigoureusement en temps et en heure, vous devez paramétrer et <a href="'. $server_settings_url . '">activer</a> le <strong><a href="https://wiki.phpbb.com/Modular_cron#Use_system_cron">service cron</a></strong> de phpBB. Sinon dès qu&apos;il y aura trop de trafic sur le forum, les résumés de l&apos;heure courante et des heures passées seront envoyés. Pour plus d&apos;informations, veuillez lire la FAQ de l&apos;extension Digests sur les forums de phpbb.com.',
+	'ACP_DIGESTS_GENERAL_SETTINGS_EXPLAIN'					=> 'Cette rubrique présente les réglages généraux de Digests, un service permettant de générer un résumé des posts publiés sur vos forums. Veuillez noter que si les résumés doivent être délivrés rigoureusement en temps et en heure, vous devez paramétrer et activer le <strong><a href="https://wiki.phpbb.com/Modular_cron#Use_system_cron">service cron</a></strong> de phpBB. Sinon dès qu&apos;il y aura trop de trafic sur le forum, les résumés de l&apos;heure courante et des heures passées seront envoyés. Pour plus d&apos;informations, veuillez lire la FAQ de l&apos;extension Digests sur les forums de phpbb.com.',
 	'ACP_DIGESTS_USER_DEFAULT_SETTINGS'						=> 'Options par défaut de l&apos;utilisateur',
 	'ACP_DIGESTS_USER_DEFAULT_SETTINGS_EXPLAIN'				=> 'Ces réglages permettent aux administrateurs de définir les valeurs par défaut qu&apos;auront les options du résumé lorsqu&apos;un utilisateur s&apos;y abonne.',
 	'ACP_DIGESTS_EDIT_SUBSCRIBERS'							=> 'Éditer les abonnés',
@@ -44,7 +42,7 @@ $lang = array_merge($lang, array(
 	'ACP_DIGESTS_RESET_CRON_RUN_TIME'						=> 'Réinitialiser le générateur de courriels',
 	'ACP_DIGESTS_RESET_CRON_RUN_TIME_EXPLAIN'				=> '',
 	'ACP_DIGESTS_TEST'										=> 'Lancer le générateur de courriels manuellement',
-	'ACP_DIGESTS_TEST_EXPLAIN'								=> 'Cette fonction permet de déclencher manuellement l&apos;émission d&apos;un résumé pour effectuer des tests de mise au point ou en cas de problèmes. Vous pouvez également l&apos;utiliser pour émettre des résumés pour une date et une heure particulière. Le fuseau horaire du forum (actuellement UTC ' . $helper->make_tz_offset($config['board_timezone'], true) . ') est utilisé lors du calcul de la date et de l&apos;heure. Veuillez noter que l&apos;instant d&apos;envoi des résumés dépend du trafic sur le forum, les résumés peuvent de ce fait parvenir en retard pour certains utilisateurs. Cela peut être corrigé si vous paramétrez un <a href="https://wiki.phpbb.com/Modular_cron#Use_system_cron">service cron</a> et <a href="'. $server_settings_url . '">activez</a> le <strong>service cron</strong> phpBB. Pour plus d&apos;informations, veuillez lire la FAQ de l&apos;extension Digests sur les forums de phpbb.com.',
+	'ACP_DIGESTS_TEST_EXPLAIN'								=> 'Cette fonction permet de déclencher manuellement l&apos;émission d&apos;un résumé pour effectuer des tests de mise au point ou en cas de problèmes. Vous pouvez également l&apos;utiliser pour émettre des résumés pour une date et une heure particulière. Le fuseau horaire du forum (actuellement UTC ' . $helper->make_tz_offset($config['board_timezone'], true) . ') est utilisé lors du calcul de la date et de l&apos;heure. Veuillez noter que l&apos;instant d&apos;envoi des résumés dépend du trafic sur le forum, les résumés peuvent de ce fait parvenir en retard pour certains utilisateurs. Cela peut être corrigé si vous paramétrez un <a href="https://wiki.phpbb.com/Modular_cron#Use_system_cron">service cron</a> et activez le <strong>service cron</strong> phpBB. Pour plus d&apos;informations, veuillez lire la FAQ de l&apos;extension Digests sur les forums de phpbb.com.',
 
 	'LOG_CONFIG_DIGESTS_BAD_DIGEST_TYPE'					=> '<strong>Attention : l&apos;abonné %1$s a un mauvais type de résumé %2$s. Un résumé journalier est recommandé.</strong>',
 	'LOG_CONFIG_DIGESTS_BAD_SEND_HOUR'						=> '<strong>L&apos;heure d&apos;envoi du résumé de l&apos;utilisateur %1$s est invalide. Elle est à %2$d. Le nombre doit être compris entre >= 0 et < 24.</strong>',
