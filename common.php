@@ -17,10 +17,6 @@ if (empty($lang) || !is_array($lang))
 	$lang = array();
 }
 
-global $phpbb_container;
-
-$config = $phpbb_container->get('config');
-
 $lang = array_merge($lang, array(
 	'PLURAL_RULE'						=> 2,
 	
@@ -123,7 +119,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_SHOW_ATTACHMENTS_EXPLAIN'	=> 'Si l&apos;option est activée, les images en pièces jointes apparaîtront dans votre résumé en bas du post ou du message privé. Les pièces jointes qui ne sont pas des images apparaîtront sous la forme de liens (résumés HTML seulement). La balise BBCode [img] n&apos;est pas impactée par ce réglage.',
 	'DIGESTS_SHOW_NEW_POSTS_ONLY' 		=> 'Afficher les nouveaux posts seulement',
 	'DIGESTS_SHOW_PMS' 					=> 'Afficher mes messages privés',
-	'DIGESTS_SIZE_ERROR'				=> sprintf("Ce champ est un champ obligatoire. Vous devez saisir une valeur positive entière, inférieure ou égale à la valeur maximum autorisée par l'administrateur du Forum. La valeur maximale autorisée est %u. Si cette valeur est à zéro, il n'y a pas de limitation.", $config['phpbbservices_digests_max_items']),
+	'DIGESTS_SIZE_ERROR'				=> 'Ce champ est un champ obligatoire. Vous devez saisir une valeur positive entière, inférieure ou égale à la valeur maximum autorisée par l&apos;administrateur du Forum. La valeur maximale autorisée est %u. Si cette valeur est à zéro, il n&apos;y a pas de limitation.',
 	'DIGESTS_SIZE_ERROR_MIN'			=> 'Vous devez saisir une valeur entière ou laisser le champ vide. Si cette valeur est à zéro, il n&apos;y a pas de limitation.',
 	'DIGESTS_SKIP'						=> 'Passer au contenu',
 	'DIGESTS_SORT_BY'					=> 'Ordre de classement des posts',

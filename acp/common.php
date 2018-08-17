@@ -19,9 +19,6 @@ if (empty($lang) || !is_array($lang))
 
 global $phpbb_container;
 
-$config = $phpbb_container->get('config');
-$helper = $phpbb_container->get('phpbbservices.digests.common');
-
 $lang = array_merge($lang, array(
 	'DIGESTS_WEEKDAY' 					=> 'Dimanche,Lundi,Mardi,Mercredi,Jeudi,Vendredi,Samedi',
 ));
@@ -67,7 +64,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_EXCLUDE_FORUMS'								=> 'Toujours exclure les forums suivants',
 	'DIGESTS_EXCLUDE_FORUMS_EXPLAIN'						=> 'Saisissez le forum_id des forums qui ne doivent pas figurer dans le résumé. Séparez les forum_id par des virgules. En indiquant 0, aucun forum ne sera exclu. Pour déterminer le forum_id d&apos;un forum, observez la valeur du paramètre &ldquo;f&rdquo; dans le champ de l&apos;URL. C&apos;est le forum_id. Exemple: http://www.example.com/phpBB3/viewforum.php?f=1. Ne pas utiliser de forum_ids qui correspondent à des catégories. <i>Ce réglage est ignoré si l&apos;option Sujets cochés seulement est cochée par l&apos;utilisateur.</i>',
 	'DIGESTS_EXPAND'										=> 'Agrandir',
-	'DIGESTS_FREQUENCY_EXPLAIN'								=> 'Les résumés hebdomadaires sont envoyés le ' . $weekdays[$config['phpbbservices_digests_weekly_digest_day']] . '. Les résumés mensuels sont envoyés le premier du mois. Le Temps Universel Coordonné  (UTC) est utilisé pour déterminer le jour de la semaine.',
+	'DIGESTS_FREQUENCY_EXPLAIN'								=> 'Les résumés hebdomadaires sont envoyés le jour de la semaine défini dans les réglages généraux de Digests. Les résumés mensuels sont envoyés le premier du mois. Le Temps Universel Coordonné (UTC) est utilisé pour déterminer le jour de la semaine.',
 	'DIGESTS_FORMAT_FOOTER' 								=> 'Format du résumé',
 	'DIGESTS_FROM_EMAIL_ADDRESS'							=> 'Adresse électronique utilisée pour expédier les résumés',
 	'DIGESTS_FROM_EMAIL_ADDRESS_EXPLAIN'					=> 'Lorsque les utilisateurs recoivent un résumé, cette adresse électronique va s&apos;afficher dans le champ &ldquo;De&rdquo;. S&apos;il est laissé vide, l&apos;adresse électronique de votre Forum sera utilisé par défaut. Faites attention lorsque vous utilisez une adresse électronique dont le domaine ne correspond pas à celui sur lequel est hébergé votre Forum, dans la mesure où votre serveur de courriels ou le serveur de courriels des utilisateurs pourra interprêter le courriel comme étant du spam.',
@@ -126,12 +123,13 @@ $lang = array_merge($lang, array(
 	'DIGESTS_RUN_TEST_EMAIL_ADDRESS'						=> 'Adresse électronique de test',
 	'DIGESTS_RUN_TEST_EMAIL_ADDRESS_EXPLAIN'				=> 'Si une adresse électronique est indiquée dans ce champ, tous les résumés seront envoyés à cette adresse à l&apos;heure spécifiée au lieu de l&apos;adresse électronique de contact du forum.',
 	'DIGESTS_RUN_TEST_HOUR'									=> 'Simulation de l&apos;heure',
-	'DIGESTS_RUN_TEST_HOUR_EXPLAIN'							=> 'Les résumés seront envoyés à l&apos;heure spécifiée. L&apos;heure est basée sur le fuseau horaire de votre forum (UTC ' . $helper->make_tz_offset($config['board_timezone'], true) . '). Si elle est dans le futur aucun résumé ne sera généré. Saisissez un nombre entier de 0 à 23.',
+	'DIGESTS_RUN_TEST_HOUR_EXPLAIN'							=> 'Les résumés seront envoyés à l&apos;heure spécifiée. L&apos;heure est basée sur le fuseau horaire de votre forum. Si elle est dans le futur aucun résumé ne sera généré. Saisissez un nombre entier de 0 à 23.',
 	'DIGESTS_RUN_TEST_MONTH'								=> 'Simulation du mois',
 	'DIGESTS_RUN_TEST_MONTH_EXPLAIN'						=> 'Saisissez un nombre entier de 1 à 12. Normalement la valeur doit être réglée avec celle du mois courant. Si l&apos;année et le mois sont dans le futur aucun résumé ne sera généré.',
 	'DIGESTS_RUN_TEST_OPTIONS'								=> 'Exécuter les options de date et d&apos;heure.',
 	'DIGESTS_RUN_TEST_SEND_TO_ADMIN'						=> 'Envoyer tous les résumés à l&apos;adresse électronique spécifiée',
-	'DIGESTS_RUN_TEST_SEND_TO_ADMIN_EXPLAIN'				=> 'Si vous émettez des résumés par courriel pendant une phase de test, tous les résumés seront envoyés à l&apos;adresse spécifiée dans le champ ci-dessous. Si vous choisissez Oui alors qu&apos;aucune adresse n&apos;a été spécifiée, l&apos;adresse électronique de contact du forum (' . $config['board_email']. ') sera utilisée. <em>Attention</em> : Certains serveurs de courriels pourraient interpréter ce grand volume de mails envoyés sur une brève période de temps depuis une même adresse comme étant du spam ou ayant un contenu inaproprié. À activer avec précaution. Si vous choisissez Non, les résumés seront aussi envoyés aux abonnés, ce qui pourrait les perturber.',
+	'DIGESTS_RUN_TEST_SEND_TO_ADMIN_EXPLAIN'				=> 'Si vous émettez des résumés par courriel pendant une phase de test, tous les résumés seront envoyés à l&apos;adresse spécifiée dans le champ ci-dessous. Si vous choisissez Oui alors qu&apos;aucune adresse n&apos;a été spécifiée, l&apos;adresse électronique de contact du forum sera utilisée. <em>Attention</em> : Certains serveurs de courriels pourraient interpréter ce grand volume de mails envoyés sur une brève période de temps depuis une même adresse comme étant du spam ou ayant un contenu inaproprié. À activer avec précaution. Si vous choisissez Non, les résumés seront aussi envoyés aux abonnés, ce qui pourrait les perturber.',
+	'DIGESTS_RUN_TEST_HOUR_EXPLAIN'							=> 'Les résumés seront envoyés à l&apos;heure spécifiée. L&apos;heure est basée sur le fuseau horaire de votre forum. Si elle est dans le futur aucun résumé ne sera généré. Saisissez un nombre entier de 0 à 23.',
 	'DIGESTS_RUN_TEST_SPOOL'								=> 'Écrire les résultats dans des fichiers au lieu de les envoyer par courriels',
 	'DIGESTS_RUN_TEST_SPOOL_EXPLAIN'						=> 'Évite que les résumés ne soient envoyés par courriels. À la place chaque résumé est écrit dans un fichier du répertoire cache/phpbbservices/digests dont le nom à le format suivant : nom d&apos;utilisateur-aaaa-mm-jj-hh-uniqueID.html ou nom d&apos;utilisateur-aaaa-mm-jj-hh-uniqueID.txt. (les fichiers avec un suffixe .txt sont des résumés textuel uniquement.) aaaa indique l&apos;année, mm le mois, jj le jour dans le mois, hh l&apos;heure et uniqueID est une chaîne hexadécimale aléatoire générée par le système. La Date et l&apos;heure dans le nom du fichier sont basés sur le temps coordonné universel (UTC). Si vous simulez un autre jour ou une autre heure pour envoyer les résumés à l&apos;aide des champs ci-dessous, les noms de fichier utiliseront cette date et cette heure. Ces résumés peuvent être visualisés si vous indiquez le bon URL.',
 	'DIGESTS_RUN_TEST_TIME_USE'								=> 'Simuler le mois et l&apos;heure, ou le jour de la semaine et l&apos;heure d&apos;envoi des résumés',
