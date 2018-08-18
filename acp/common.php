@@ -17,8 +17,6 @@ if (empty($lang) || !is_array($lang))
 	$lang = array();
 }
 
-global $phpbb_container;
-
 $lang = array_merge($lang, array(
 	'DIGESTS_WEEKDAY' 					=> 'Dimanche,Lundi,Mardi,Mercredi,Jeudi,Vendredi,Samedi',
 ));
@@ -129,7 +127,6 @@ $lang = array_merge($lang, array(
 	'DIGESTS_RUN_TEST_OPTIONS'								=> 'Exécuter les options de date et d&apos;heure.',
 	'DIGESTS_RUN_TEST_SEND_TO_ADMIN'						=> 'Envoyer tous les résumés à l&apos;adresse électronique spécifiée',
 	'DIGESTS_RUN_TEST_SEND_TO_ADMIN_EXPLAIN'				=> 'Si vous émettez des résumés par courriel pendant une phase de test, tous les résumés seront envoyés à l&apos;adresse spécifiée dans le champ ci-dessous. Si vous choisissez Oui alors qu&apos;aucune adresse n&apos;a été spécifiée, l&apos;adresse électronique de contact du forum sera utilisée. <em>Attention</em> : Certains serveurs de courriels pourraient interpréter ce grand volume de mails envoyés sur une brève période de temps depuis une même adresse comme étant du spam ou ayant un contenu inaproprié. À activer avec précaution. Si vous choisissez Non, les résumés seront aussi envoyés aux abonnés, ce qui pourrait les perturber.',
-	'DIGESTS_RUN_TEST_HOUR_EXPLAIN'							=> 'Les résumés seront envoyés à l&apos;heure spécifiée. L&apos;heure est basée sur le fuseau horaire de votre forum. Si elle est dans le futur aucun résumé ne sera généré. Saisissez un nombre entier de 0 à 23.',
 	'DIGESTS_RUN_TEST_SPOOL'								=> 'Écrire les résultats dans des fichiers au lieu de les envoyer par courriels',
 	'DIGESTS_RUN_TEST_SPOOL_EXPLAIN'						=> 'Évite que les résumés ne soient envoyés par courriels. À la place chaque résumé est écrit dans un fichier du répertoire cache/phpbbservices/digests dont le nom à le format suivant : nom d&apos;utilisateur-aaaa-mm-jj-hh-uniqueID.html ou nom d&apos;utilisateur-aaaa-mm-jj-hh-uniqueID.txt. (les fichiers avec un suffixe .txt sont des résumés textuel uniquement.) aaaa indique l&apos;année, mm le mois, jj le jour dans le mois, hh l&apos;heure et uniqueID est une chaîne hexadécimale aléatoire générée par le système. La Date et l&apos;heure dans le nom du fichier sont basés sur le temps coordonné universel (UTC). Si vous simulez un autre jour ou une autre heure pour envoyer les résumés à l&apos;aide des champs ci-dessous, les noms de fichier utiliseront cette date et cette heure. Ces résumés peuvent être visualisés si vous indiquez le bon URL.',
 	'DIGESTS_RUN_TEST_TIME_USE'								=> 'Simuler le mois et l&apos;heure, ou le jour de la semaine et l&apos;heure d&apos;envoi des résumés',
