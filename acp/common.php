@@ -49,6 +49,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_CUSTOM_STYLESHEET_PATH_EXPLAIN'				=> 'Ce réglage ne s&apos;applique que si l&apos;option Activer la feuille de style personnalisée est activée. Si elle est activée, cette feuille de style sera appliquée à tous les résumés stylés. Le chemin d&apos;accès doit être un chemin d&apos;accès relatif à votre dossier de styles phpBB qui doit normalement se trouver dans le sous-dossier theme. Nota : vous êtes responsables de la création de la feuille de style et de son placement dans un fichier ayant pour nom celui saisi ici à l&apos;endroit approprié sur votre serveur. Exemple: prosilver/theme/digest_stylesheet.css. Pour des informations relatives à la création de feuilles de style, cliquez <a href="http://www.w3schools.com/css/">ici</a>.',
 	'DIGESTS_COLLAPSE'										=> 'Réduire',
 	'DIGESTS_COMMA'											=> ', ',		// Utilisée pour les salutations et pour séparer les éléments dans les listes
+	'DIGESTS_CREATE_DIRECTORY_ERROR'						=> 'Impossible de créer le dossier %s. Cela peut être dû à des permissions insuffisantes. Les permissions de fichier du dossier doivent être réglées sur écriture publique (777 sur les système à base Unix).',
 	'DIGESTS_DEFAULT'										=> 'Abonner en utilisant les valeurs par défaut',
 	'DIGESTS_DAILY_ONLY'									=> 'Résumés journaliers seulement',
 	'DIGESTS_ENABLE_AUTO_SUBSCRIPTIONS'						=> 'Activer l&apos;abonnement automatique',
@@ -95,6 +96,8 @@ $lang = array_merge($lang, array(
 	'DIGESTS_MAX_ITEMS_EXPLAIN'								=> 'Pour des raisons de performances, vous pouvez avoir besoin de définir une limite absolue quant au nombre de posts dans un résumé. Si vous indiquez 0 (zéro) le résumé pourra avoir une taille illimitée. Vous pouvez utiliser tout nombre entier de votre choix dans ce champ. Veuillez noter qu&apos;un résumé est contraint par le nombre de posts dans le type de résumé demandé (journalier, hebdomadaire ou mensuel) ainsi que d&apos;autres critères définis par l&apos;utilisateur.',
 	'DIGESTS_MAIL_FREQUENCY' 								=> 'Fréquence d&apos;envoi du résumé',
 	'DIGESTS_MIGRATE_UNSUPPORTED_VERSION'					=> 'Les mises à niveau des modifications des résumés (pour phpBB 3.0) sont prises en charge depuis la version 2.2.6 et suivantes. Vous utilisez la version %s. L\extension ne peut pas être déplacée ou installée. Veuillez consulter l&apos;aide sur le forum de support de phpbb.com.',
+	'DIGESTS_MIN_POPULARITY_SIZE'							=> 'Nombre de posts minimum par sujet pour la popularité',
+	'DIGESTS_MIN_POPULARITY_SIZE_EXPLAIN'					=> 'Permet de définir le nombre minimum de posts par jour nécessaires à un sujet pour être considéré comme populaire. Un abonné ne peut pas définir une valeur inférieure à celle-ci. Cette valeur est uniquement appliquée sur la période sélectionnée par l&apos;abonné : journalière, hebdomadaire ou mensuelle, afin de refléter ainsi la popularité récente d&apos;un sujet.',
 	'DIGESTS_MONTHLY_ONLY'									=> 'Résumés mensuels seulement',
 	'DIGESTS_NEVER_VISITED'									=> 'Jamais visité',
 	'DIGESTS_NO_DIGESTS_SENT'								=> 'Aucun résumé envoyé',
