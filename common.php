@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB Extension - Digests
-* @copyright (c) 2018 Mark D. Hamill (mark@phpbbservices.com)
+* @copyright (c) 2019 Mark D. Hamill (mark@phpbbservices.com)
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -48,7 +48,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_FORMAT_PLAIN'				=> 'Stylé ordinaire',
 	'DIGESTS_FORMAT_PLAIN_EXPLAIN'		=> 'Stylé sans couleur ni police',
 	'DIGESTS_FORMAT_PLAIN_CLASSIC'		=> 'Stylé ordinaire avec présentation en tableaux',
-	'DIGESTS_FORMAT_PLAIN_CLASSIC_EXPLAIN'	=> 'Similaire à Stylé ordinaire, mais avec avec présentation en tableaux',
+	'DIGESTS_FORMAT_PLAIN_CLASSIC_EXPLAIN'	=> 'Similaire à Stylé ordinaire, excepté que les sujets des posts et les messages privés sont présentés dans des tableaux',
 	'DIGESTS_FORMAT_STYLING'			=> 'Style du résumé',
 	'DIGESTS_FORMAT_STYLING_EXPLAIN'	=> 'Veuillez noter que le rendu actuel du style dépend des capacités de votre logiciel de courrier électronique. Déplacez votre curseur au-dessus des différents types de style pour en savoir plus à leur sujet.',
 	'DIGESTS_FORMAT_TEXT'				=> 'Texte',
@@ -62,7 +62,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_JUMP_TO_MSG'				=> 'Id Msg',
 	'DIGESTS_JUMP_TO_POST'				=> 'Id Post',
 	'DIGESTS_LASTVISIT_RESET'			=> 'Réinitialiser la date de ma dernière visite lorsque je m&apos;envoie un résumé',
-	'DIGESTS_LASTVISIT_RESET_EXPLAIN'	=> 'Lorsque l&apos;option est activée, les posts sur le forum apparaîtront comme lu s&apos;ils ont été postés avant la date et l&apos;heure de création de votre résumé. La sélection de cette option permet d&apos;indiquer au forum que la lecture des posts de votre résumé équivaut à la lecture de ces posts sur le forum.',
+	'DIGESTS_LASTVISIT_RESET_EXPLAIN'	=> 'Lorsque l&apos;option est activée, la date et l&apos;heure de création de votre résumé sera utilisé pour définir votre date de dernière visite. Les notifications relatives aux sujets pour lesquels le résumé a été créé seront également marqués comme lus.',
 	'DIGESTS_LINK'						=> 'Lien du post',
 	'DIGESTS_MARK_READ'					=> 'Marquer comme lu lorsqu&apos;ils apparaissent dans le résumé',
 	'DIGESTS_MAX_DISPLAY_WORDS'			=> 'Nombre maximal de mots à afficher dans un post',
