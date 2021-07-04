@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB Extension - Digests
-* @copyright (c) 2019 Mark D. Hamill (mark@phpbbservices.com)
+* @copyright (c) 2021 Mark D. Hamill (mark@phpbbservices.com)
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -46,6 +46,10 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_DIGESTS_CACHE_CLEARED'						=> '<strong>Le dossier cache/phpbbservices/digests a été vidé',
 	'LOG_CONFIG_DIGESTS_CLEAR_SPOOL_ERROR'					=> '<strong>Impossible d&apos;effacer les fichiers dans le dossier cache/phpbbservices/digests. Cela peut être dû à un problème de permissions ou à un chemin d&apos;accès incorrect. Les permissions de fichier du dossier doivent être réglées sur écriture publique (777 sur les systèmes à base Unix).</strong>',
 	'LOG_CONFIG_DIGESTS_CREATE_DIRECTORY_ERROR'				=> '<strong>Impossible de créer le dossier %s. Cela est peut-être dû à des permissions insuffisantes. Les permissions du dossier doivent être réglées en écriture publique (777 sur les systèmes Unix).</strong>',
+	'LOG_CONFIG_DIGESTS_CRITICAL_ERROR'						=> '<strong>Le générateur de courriels des résumés a eu une erreur inattendue.<br>Erreur numéro : [%1$s]<br>Erreur : %2$s<br>Programme : %3$s Ligne : %4$s</strong>',
+	'LOG_CONFIG_DIGESTS_DEBUG_POSTS_CURRENT_HOUR'			=> '<strong>Débogage : Requête abonnés post SQL : Date UTC : %s Heure UTC : %s SQL = %s</strong>',
+	'LOG_CONFIG_DIGESTS_DEBUG_SHOULD_RUN'					=> '<strong>Débogage : Doit être lancé à : %s, digest peut fonctionner après cette heure : %s</strong>',
+	'LOG_CONFIG_DIGESTS_DEBUG_SQL_CURRENT_HOUR'				=> '<strong>Débogage : Requête abonnés SQL : Date UTC : %s Heure UTC : %s SQL = %s</strong>',
 	'LOG_CONFIG_DIGESTS_EDIT_SUBSCRIBERS'					=> '<strong>Édition des abonnés au résumé</strong>',
 	'LOG_CONFIG_DIGESTS_EMAILING_FAILURE'					=> '<strong>Impossible d&apos;envoyer le résumé le %s à %d UTC</strong>',	
 	'LOG_CONFIG_DIGESTS_EXCEPTION_ERROR'					=> '<strong>L&apos;exception PHP d&apos;essai/capture suivante est survenue : %s</strong>',
@@ -57,6 +61,8 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_DIGESTS_GENERAL'							=> '<strong>Réglages généraux des résumés modifiés.</strong>',
 	'LOG_CONFIG_DIGESTS_HOUR_RUN'							=> '<strong>Envoi des résumés le %1$s à %2$02d h UTC</strong>',
 	'LOG_CONFIG_DIGESTS_INCONSISTENT_DATES'					=> '<strong>Une erreur inhabituelle est survenue. Aucune heure n&apos;a été traitée car la dernière heure à laquelle les résumés ont été envoyés avec succès (daté du %1$d) est située après la date de préparation des résumés (daté du %2$d).</strong>',
+	'LOG_CONFIG_DIGESTS_LOG_ABEND'							=> '<strong>L&apos;arrêt du générateur de courriels des résumés est anormal. Consultez le journal des erreurs pour plus de détails.</strong>',
+	'LOG_CONFIG_DIGESTS_LOG_END'							=> '<strong>arrêt du générateur de courriels des résumés</strong>',
 	'LOG_CONFIG_DIGESTS_LOG_ENTRY_BAD'						=> '<strong>Impossible d&apos;envoyer un résumé à %1$s ((%2$s). Ce problème doit être analysé et corrigé dans la mesure où cela signale probablement un problème d&apos;envoi de courriel plus général.</strong>',
 	'LOG_CONFIG_DIGESTS_LOG_ENTRY_BAD_NO_EMAIL'				=> '<strong>Impossible d&apos;envoyer un résumé à %s. Ce problème doit être analysé et corrigé dans la mesure où cela signale probablement un problème d&apos;envoi de courriel plus général.</strong>',
 	'LOG_CONFIG_DIGESTS_LOG_ENTRY_GOOD'						=> array(
@@ -71,7 +77,6 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_DIGESTS_LOG_ENTRY_NONE'						=> '<strong>Le résumé n&apos;a PAS été envoyé à %1$s (%2$s) car le réglage de ses filtres et de ses préférences font qu&apos;il n&apos;y avait rien à envoyer.</strong>',
 	'LOG_CONFIG_DIGESTS_LOG_ENTRY_NONE_NO_EMAIL'			=> '<strong>Le résumé n&apos;a PAS été envoyé à %s car le réglage de ses filtres et de ses préférences font qu&apos;il n&apos;y avait rien à envoyer.</strong>',
 	'LOG_CONFIG_DIGESTS_LOG_START'							=> '<strong>Lancement du générateur de courriels de résumés.</strong>',
-	'LOG_CONFIG_DIGESTS_LOG_END'							=> '<strong>Arrêt du générateur de courriels de résumés.</strong>',
 	'LOG_CONFIG_DIGESTS_MAILER_RAN_WITH_ERROR'				=> '<strong>Une erreur est survenue alors que le générateur de courriel était démarré. Un ou plusieurs résumés ont peut-être pu être générés avec succès.</strong>',
 	'LOG_CONFIG_DIGESTS_MANUAL_RUN'							=> '<strong>Demande de lancement manuel du générateur de courriels</strong>',
 	'LOG_CONFIG_DIGESTS_MESSAGE'							=> '<strong>%s</strong>',	// Utilisé pour le débogage général, car il est sinon difficile de corriger des problèmes en mode cron.
@@ -86,7 +91,6 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_DIGESTS_SIMULATION_DATE_TIME'				=> '<strong>L&apos;administrateur a choisi de créer des résumés le %s, heure du forum.</strong>',
 	'LOG_CONFIG_DIGESTS_SORT_BY_ERROR'						=> '<strong>Le générateur de courriels a été appelé avec un user_digest_sortby = %1$s invalide pour %2$s</strong>',
 	'LOG_CONFIG_DIGESTS_SYSTEM_CRON_RUN'					=> '<strong>Demande de lancement du générateur de courriels par le service cron</strong>',
-	'LOG_CONFIG_DIGESTS_TEST'								=> '<strong>%s</strong>',	// Utilisé pour en cas de problème général, veuillez le laisser tel quel dans toutes les traductions.
 	'LOG_CONFIG_DIGESTS_TIMEZONE_ERROR'						=> '<strong>Le user_timezone "%1$s" pour le nom d&apos;utilisateur "%2$s" est invalide. En considérant un fuseau horaire de "%3$s". Veuillez demander à l&apos;utilisateur de régler son fuseau horaire dans le panneau de contrôle de l&apos;utilisateur. Voir http://php.net/manual/en/timezones.php pour une liste des fuseaux horaires valides.</strong>',
 	'LOG_CONFIG_DIGESTS_USER_DEFAULTS'						=> '<strong>Réglages par défaut des résumés utilisateurs modifiés</strong>',
 ));

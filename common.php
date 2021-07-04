@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB Extension - Digests
-* @copyright (c) 2019 Mark D. Hamill (mark@phpbbservices.com)
+* @copyright (c) 2021 Mark D. Hamill (mark@phpbbservices.com)
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -34,13 +34,15 @@ $lang = array_merge($lang, array(
 	'DIGESTS_COUNT_LIMIT_EXPLAIN'		=> 'Saisissez un nombre supérieur à zéro si vous souhaitez limiter le nombre de posts dans le résumé.',
 	'DIGESTS_DAILY'						=> 'Journalier',
 	'DIGESTS_DATE'						=> 'Date',
-	'DIGESTS_DELIMITER'					=> ' :: ', // Utilisé pour aider à afficher la hiérarchie des noms de forum depuis l'index jusqu'en bas
+	'DIGESTS_DELIMITER'					=> ' &#8249; ', // Utilisé pour faciliter l'affichage de la hiérarchie des noms de forum depuis l'index jusqu'en bas. Ne devrait pas changer dans les traductions linguistiques, sauf si un caractère différent est utilisé dans le fil d'Ariane.
 	'DIGESTS_DISABLED_MESSAGE'			=> 'Pour activer les champs, sélectionnez Réglages généraux et sélectionnez le type de résumé',
 	'DIGESTS_DISCLAIMER'				=> 'Vous pouvez modifier ou supprimer votre abonnement aux forums depuis le <a href="%1$sucp.%3$s">Panneau de contrôle de l&apos;utilisateur</a>. Si vous avez des questions ou si vous souhaitez nous contacter veuillez adresser votre courriel au <a href="mailto:%4$s?subject=Digests">webmaster des forums de %2$s</a>.',
 	'DIGESTS_EXPLANATION'				=> 'Les résumés qui sont envoyés périodiquement sont constitués à partir des posts réalisés sur le forum. Les résumés peuvent être envoyés à une récurence journalière, hebdomadaire ou mensuelle et à une heure que vous choisisisez. Vous pouvez spécifier les forums dont les posts vous intéressent plus particulièrement, ou par défaut, vous pouvez sélectionner choisir de recevoir tous les posts de tous les forums. Vous pouvez annuler votre abonnement à tout moment en revenant sur cette page. Nombreux sont les utilisateurs qui trouvent ces résumés très utiles. Nous vous encourageons à faire un essai !',
 	'DIGESTS_FILTER_ERROR'				=> 'Le générateur de courriels a été appelé avec un user_digest_filter_type = %s invalide',
 	'DIGESTS_FILTER_FOES'				=> 'Retirer les posts émis par les Ignorés dans le résumé',
 	'DIGESTS_FILTER_TYPE'				=> 'Type de posts à afficher dans le résumé',
+	'DIGESTS_FOREIGN_LINK_REMOVED'		=> '[ Lien étranger supprimé. Cliquez sur le lien du message ou du sujet pour voir ce lien. ]',
+	'DIGESTS_FOREIGN_LINK_REMOVED_TEXT'	=> '[ Lien étranger supprimé. Lisez le sujet du forum pour voir ce lien. ]',
 	'DIGESTS_FORMAT_HTML'				=> 'Stylé',
 	'DIGESTS_FORMAT_HTML_EXPLAIN'		=> 'Les styles sont pris en compte si votre logiciel de courrier électronique l&apos;autorise.',
 	'DIGESTS_FORMAT_HTML_CLASSIC'		=> 'Stylé avec présentation en tableaux',
@@ -58,6 +60,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_FREQUENCY_EXPLAIN'			=> 'Les résumés hebdomadaires sont envoyés le %s. Les résumés mensuels sont envoyés le premier du mois. Le temps universel coordonné (UTC) est utilisé pour déterminer le jour de la semaine.',
 	'DIGESTS_FREQUENCY_SHORT'			=> 'Type de résumé',
 	'DIGESTS_HOURS_ABBREVIATION' 		=> ' h',	// cf. : http://www.scienceeditingexperts.com/which-is-the-correct-abbreviation-for-hours-2h-2-h-2hs-2-hs-2hrs-or-2-hrs, DIGESTS_AM and DIGESTS_PM sont sinon utilisés si spécifié dans user_dateformat
+	'DIGESTS_INSTALL_REQUIREMENTS'		=> 'Votre version de PHP doit être &gt ; 3.3.0 et &lt ; 4.0 pour installer cette extension. Veuillez résoudre ce problème, puis réessayer d'activer l'extension.',
 	'DIGESTS_INTRODUCTION' 				=> 'Voici le résumé des derniers posts publiés sur les forums de %s. <em>Ne répondez pas</em> à ce courriel pour répondre aux sujets, posts ou messages privés. Mais <em>veuillez vous rendre sur le forum</em> pour rejoindre la discussion ! (En cas de problème d&apos;affichage du résumé, assurez-vous de bien avoir chargé tout le contenu distant)',
 	'DIGESTS_JUMP_TO_MSG'				=> 'Id Msg',
 	'DIGESTS_JUMP_TO_POST'				=> 'Id Post',
@@ -79,6 +82,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_NEW_POSTS_ONLY_EXPLAIN'	=> 'Cette option filtre tous les posts qui ont été postés avant la date et l&apos;heure de votre dernière visite sur ce forum. Si vous visitez le forum fréquemment et que vous lisez la plupart des posts, cela évitera l&apos;affichage de posts redondants dans votre résumé. Vous risquez cependant de manquer certains posts dans des forums que vous n&apos;avez pas lu.',
 	'DIGESTS_NO_BOOKMARKED_POSTS'		=> 'Il n&apos;y a pas de nouveaux posts marqués.',
 	'DIGESTS_NO_CONSTRAINT'				=> 'Pas de limitation',
+	'DIGESTS_NO_FORUMS_AVAILABLE'		=> 'Vous nl&apos;avez pas accès aux forums',
 	'DIGESTS_NO_FORUMS_CHECKED' 		=> 'Au moins un forum doit être coché',
 	'DIGESTS_NO_LIMIT'					=> 'Pas de limitation',
 	'DIGESTS_NO_POSTS'					=> 'Il n&apos;y a pas de nouveaux posts.',

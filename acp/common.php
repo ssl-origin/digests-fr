@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB Extension - Digests
-* @copyright (c) 2019 Mark D. Hamill (mark@phpbbservices.com)
+* @copyright (c) 2021 Mark D. Hamill (mark@phpbbservices.com)
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -46,10 +46,12 @@ $lang = array_merge($lang, array(
 	'DIGESTS_BASED_ON'										=> '(Basée sur UTC%+d)',
 	'DIGESTS_COLLAPSE'										=> 'Reployer',
 	'DIGESTS_COMMA'											=> ', ',		// Used  in salutations and to separate items in lists
-	'DIGESTS_CREATE_DIRECTORY_ERROR'						=> 'Impossible de créer le dossier %s. Cela peut être dû à des autorisations insuffisantes. Les autorisations de fichier sur le dossier doivent être définies sur écriture publique (777 sur les systèmes Unix).',
+	'DIGESTS_CREATE_DIRECTORY_ERROR'						=> 'Impossible de créer le dossier %s. Cela peut être dû à des autorisations insuffisantes. Les autorisations sur le dossier doivent être définies en écriture publique (777 sur les systèmes Unix).',
 	'DIGESTS_CURRENT_VERSION_INFO'							=> 'Vous exécutez la version <strong>%s</strong>.',
 	'DIGESTS_CUSTOM_STYLESHEET_PATH'						=> 'Chemin d&apos;accès à la feuille de style personnalisée',
 	'DIGESTS_CUSTOM_STYLESHEET_PATH_EXPLAIN'				=> 'Ce réglage ne s&apos;applique que si l&apos;option Activer la feuille de style personnalisée est activée. Si elle est activée, cette feuille de style sera appliquée à tous les résumés stylés. Le chemin d&apos;accès doit être un chemin d&apos;accès relatif à votre dossier de styles phpBB qui doit normalement se trouver dans le sous-dossier theme. Nota : vous êtes responsables de la création de la feuille de style et de son placement dans un fichier ayant pour nom celui saisi ici à l&apos;endroit approprié sur votre serveur. Exemple: prosilver/theme/digest_stylesheet.css. Pour des informations relatives à la création de feuilles de style, cliquez <a href="http://www.w3schools.com/css/">ici</a>.',
+	'DIGESTS_DEBUG'											=> 'Activer le débogage des résumés',
+	'DIGESTS_DEBUG_EXPLAIN'									=> 'Utilisé pour le débogage technique. Cette fonction permet dl&apos;écrire certaines informations essentielles au dépannage dans le journal dl&apos;administration, telles que les requêtes à la base de données utilisées pour assembler les résumés. Vous devez normalement avoir des compétences en matière de développement pour interpréter ces informations.',
 	'DIGESTS_DEFAULT'										=> 'Abonner en utilisant les valeurs par défaut',
 	'DIGESTS_DAILY_ONLY'									=> 'Résumés journaliers seulement',
 	'DIGESTS_ENABLE_AUTO_SUBSCRIPTIONS'						=> 'Activer l&apos;abonnement automatique',
@@ -84,7 +86,7 @@ $lang = array_merge($lang, array(
 																	2	=>	'%d Utilisateurs',
 																),
 																	'DIGESTS_LOWERCASE_DIGEST_TYPE'							=> 'Indiquer la fréquence d&apos;envoi du résumé en lettres minuscules',
-'DIGESTS_LOWERCASE_DIGEST_TYPE_EXPLAIN'					=> 'En Anglais, le titre du résumé sera par exemple &ldquo;My board name Daily Digest&rdquo;. Dans certaines langues &ldquo;Digest Daily&rdquo; précède le nom du forum. En indiquant Oui, la fréquence du résumé apparaîtra ainsi &ldquo;Résumé journalier de mon forum&rdquo;, avec la première lettre de la fréquence d&apos;envoi en minuscule.',
+	'DIGESTS_LOWERCASE_DIGEST_TYPE_EXPLAIN'					=> 'En Anglais, le titre du résumé sera par exemple &ldquo;My board name Daily Digest&rdquo;. Dans certaines langues &ldquo;Digest Daily&rdquo; précède le nom du forum. En indiquant Oui, la fréquence du résumé apparaîtra ainsi &ldquo;Résumé journalier de mon forum&rdquo;, avec la première lettre de la fréquence d&apos;envoi en minuscule.',
 	'DIGESTS_MAILER_NOT_RUN'								=> 'Le générateur de courriels n&apos;a pas été lancé car il n&apos;a pas été activé ou parce qu&apos;il n&apos;y a pas eu de requête pour effacer le dossier digests.',
 	'DIGESTS_MAILER_RAN_SUCCESSFULLY'						=> 'Le générateur de courriels a été lancé avec succès.',
 	'DIGESTS_MAILER_RAN_WITH_ERROR'							=> 'Une erreur est survenue avec le générateur de courriels. Un ou plusieurs résumés ont pu être générés avec succès. Les journaux d&apos;administration et d&apos;erreurs phpBB peuvent contenir plus d&apos;information.',
@@ -96,6 +98,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_MAX_ITEMS'										=> 'Nombre maximum de posts autorisés dans un résumé',
 	'DIGESTS_MAX_ITEMS_EXPLAIN'								=> 'Pour des raisons de performances, vous pouvez avoir besoin de définir une limite absolue quant au nombre de posts dans un résumé. Si vous indiquez 0 (zéro) le résumé pourra avoir une taille illimitée. Vous pouvez utiliser tout nombre entier de votre choix dans ce champ. Veuillez noter qu&apos;un résumé est contraint par le nombre de posts dans le type de résumé demandé (journalier, hebdomadaire ou mensuel) ainsi que d&apos;autres critères définis par l&apos;utilisateur.',
 	'DIGESTS_MAIL_FREQUENCY' 								=> 'Fréquence d&apos;envoi du résumé',
+	'DIGESTS_MAILER_RESET' 									=> 'Le générateur de courriels a été réinitialisé',
 	'DIGESTS_MIGRATE_UNSUPPORTED_VERSION'					=> 'Les mises à niveau des modifications des résumés (pour phpBB 3.0) sont prises en charge depuis la version 2.2.6 et suivantes. Vous utilisez la version %s. L&apos;extension ne peut pas être déplacée ou installée. Veuillez consulter l&apos;aide sur le forum de discussion pour l&apos;extension de phpbb.com.',
 	'DIGESTS_MIN_POPULARITY_SIZE'							=> 'Nombre de posts minimum par sujet pour la popularité',
 	'DIGESTS_MIN_POPULARITY_SIZE_EXPLAIN'					=> 'Permet de définir le nombre minimum de posts par jour nécessaires à un sujet pour être considéré comme populaire. Un abonné ne peut pas définir une valeur inférieure à celle-ci. Cette valeur est uniquement appliquée sur la période sélectionnée par l&apos;abonné : journalière, hebdomadaire ou mensuelle, afin de refléter ainsi la popularité récente d&apos;un sujet.',
@@ -139,7 +142,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_SHOW_EMAIL'									=> 'Afficher l&apos;adresse électronique dans le journal',
 	'DIGESTS_SHOW_EMAIL_EXPLAIN'							=> 'Si cette option est activée, l&apos;adresse électronique de l&apos;abonné est rajoutée dans les entrées du journal d&apos;administration avec son nom d&apos;utilisateur. Utile en cas de problème avec le générateur de courriels.',
 	'DIGESTS_SHOW_FORUM_PATH'								=> 'Afficher le chemin d&apos;accès du forum dans le résumé',
-	'DIGESTS_SHOW_FORUM_PATH_EXPLAIN'						=> 'Lorsque cette option est activée, les noms des catégories et des forums dans le lequel se trouve un forum vont être affichés. Par exemple: &ldquo;Catégorie 1 :: Forum 1 :: Catégorie A :: Forum B&rdquo;, en y incluant toute la hiérarchie dans laquelle se trouve votre forum. Sinon, seul le nom du forum sera affiché, comme &ldquo;Forum B&rdquo; dans l&apos;exemple précédent.',
+	'DIGESTS_SHOW_FORUM_PATH_EXPLAIN'						=> 'Lorsque cette option est activée, les noms des catégories et des forums dans le lequel se trouve un forum vont être affichés. Par exemple: &ldquo;Catégorie 1 &#8249; Forum 1 &#8249; Catégorie A &#8249; Forum B&rdquo;, en y incluant toute la hiérarchie dans laquelle se trouve votre forum. Sinon, seul le nom du forum sera affiché, comme &ldquo;Forum B&rdquo; dans l&apos;exemple précédent.',
 	'DIGESTS_SORT_ORDER'									=> 'Ordre de classement',
 	'DIGESTS_STOPPED_SUBSCRIBING'							=> 'Les désabonnés',
 	'DIGESTS_STRIP_TAGS'									=> 'Balises HTML à supprimer dans le résumé',
@@ -153,10 +156,11 @@ $lang = array_merge($lang, array(
 	'DIGESTS_SUBSCRIBERS_DAILY'                           	=> 'Abonnés journaliers',
 	'DIGESTS_SUBSCRIBERS_WEEKLY'                           	=> 'Abonnés hebdomadaires',
 	'DIGESTS_SUBSCRIBERS_MONTHLY'                           => 'Abonnés mensuels',
+	'DIGESTS_UNLINK_FOREIGN_URLS'							=> 'Supprimer les URL étrangères des résumés',
+	'DIGESTS_UNLINK_FOREIGN_URLS_EXPLAIN'					=> 'Supprime les liens vers d&apos;autres domaines dans les résumés. Certains systèmes de messagerie signalent les courriels contenant des liens vers d&apos;autres domaines comme étant du spam potentiel. Cela peut entraîner l&apos;envoi des résumés dans le dossier de spam ou empêcher l&apos;envoi de résumés par le serveur de messagerie sortant.',
 	'DIGESTS_UNSUBSCRIBE'									=> 'Désabonner',
 	'DIGESTS_UNSUBSCRIBE_SUBJECT'							=> 'Vous avez été désabonnés de la réception par courriels du résumé',
 	'DIGESTS_UNSUBSCRIBED'									=> 'Les non abonnés',
-	'DIGESTS_USER_DIGESTS_CHECK_ALL_FORUMS'					=> 'Envoyer tous les forums dans le résumé',
 	'DIGESTS_USER_DIGESTS_MAX_DISPLAY_WORDS'				=> 'Nombre maximum de mots à afficher dans un post',
 	'DIGESTS_USER_DIGESTS_MAX_DISPLAY_WORDS_EXPLAIN'		=> 'Saisir -1 pour afficher l&apos;intégralité du texte du post par défaut. Saisir zéro (0) signifie que l&apos;utilisateur ne verra pas du tout le texte du post.',	
 	'DIGESTS_USER_DIGESTS_PM_MARK_READ'						=> 'Marquer les messages privés comme lus lorsqu&apos;ils apparaissent dans le résumé',
