@@ -36,7 +36,12 @@ $lang = array_merge($lang, array(
 	'DIGESTS_DATE'						=> 'Date',
 	'DIGESTS_DELIMITER'					=> ' &#8249; ', // Utilisé pour faciliter l'affichage de la hiérarchie des noms de forum depuis l'index jusqu'en bas. Ne devrait pas changer dans les traductions linguistiques, sauf si un caractère différent est utilisé dans le fil d'Ariane.
 	'DIGESTS_DISABLED_MESSAGE'			=> 'Pour activer les champs, sélectionnez Réglages généraux et sélectionnez le type de résumé',
-	'DIGESTS_DISCLAIMER'				=> 'Vous pouvez modifier ou supprimer votre abonnement aux forums depuis le <a href="%1$sucp.%3$s">Panneau de contrôle de l&apos;utilisateur</a>. Si vous avez des questions ou si vous souhaitez nous contacter veuillez adresser votre courriel au <a href="mailto:%4$s?subject=Digests">webmaster des forums de %2$s</a>.',
+	'DIGESTS_DISCLAIMER_HTML'			=> '<p><a href="%5$s">Désinscription en un clic</a></p><p>Vous pouvez également modifier ou supprimer votre abonnement du forum&rsquo;s <a href="%1$sucp.%3$s">Panneau de configuration utilisateur</a>.</p><p>Si vous avez des questions ou des commentaires sur vos résumés, veuillez les envoyer au <a href="mailto:%4$s?subject=Digests">%2$s webmaster</a>.</p>',
+	'DIGESTS_DISCLAIMER_TEXT'			=> 'Désinscription en un clic : %5$s
+	
+Vous pouvez également modifier ou supprimer votre abonnement à partir du panneau de contrôle de l‘utilisateur du forum.
+	
+Si vous avez des questions ou des commentaires sur vos résumés, veuillez les envoyer au webmaster : %4$s.',
 	'DIGESTS_EXPLANATION'				=> 'Les résumés qui sont envoyés périodiquement sont constitués à partir des posts réalisés sur le forum. Les résumés peuvent être envoyés à une récurence journalière, hebdomadaire ou mensuelle et à une heure que vous choisisisez. Vous pouvez spécifier les forums dont les posts vous intéressent plus particulièrement, ou par défaut, vous pouvez sélectionner choisir de recevoir tous les posts de tous les forums. Vous pouvez annuler votre abonnement à tout moment en revenant sur cette page. Nombreux sont les utilisateurs qui trouvent ces résumés très utiles. Nous vous encourageons à faire un essai !',
 	'DIGESTS_FILTER_ERROR'				=> 'Le générateur de courriels a été appelé avec un user_digest_filter_type = %s invalide',
 	'DIGESTS_FILTER_FOES'				=> 'Retirer les posts émis par les Ignorés dans le résumé',
@@ -145,6 +150,8 @@ $lang = array_merge($lang, array(
 	'DIGESTS_TOC_EXPLAIN'				=> 'Si le forum est très actif, vous pouvez inclure un sommaire dans votre résumé. Dans les résumés stylés, le sommaire comporte des liens qui permettent d&apos;aller à un post en particulier ou à un message privé dans le résumé.',
 	'DIGESTS_UNKNOWN'					=> 'Inconnu',
 	'DIGESTS_UNREAD'					=> 'Non lu',
+	'DIGESTS_UNSUBSCRIBE_FAILURE'		=> 'Désolé, mais nous n‘avons pas pu vous désinscrire de la réception de résumés.',
+	'DIGESTS_UNSUBSCRIBE_SUCCESS'		=> 'Vous avez été désabonné de la réception d‘autres résumés.',
 	'DIGESTS_UPDATED'					=> 'Les réglages de votre résumé ont été enregistrés',
 	'DIGESTS_USE_BOOKMARKS'				=> 'Les sujets cochés seulement',
 	'DIGESTS_WEEKDAY' 					=> 'Dimanche,Lundi,Mardi,Mercredi,Jeudi,Vendredi,Samedi',
