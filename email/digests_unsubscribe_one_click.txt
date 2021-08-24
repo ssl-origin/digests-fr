@@ -1,7 +1,7 @@
-Cher {{ USERNAME }},
+Bonjour {{ USERNAME }},
 
 Comme demandé, vous n'êtes plus abonné pour recevoir les résumés du forum {{ FORUM_NAME }}.
 
 Cordialement,
 
-{{ FORUM_NAME }} Équipe administrative
+L'équipe d'administration du forum {{ FORUM_NAME }}
