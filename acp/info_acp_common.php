@@ -17,6 +17,22 @@ if (empty($lang) || !is_array($lang))
 	$lang = array();
 }
 
+// NOTE À L'ATTENTION DES DÉVELOPPEURS
+//
+// Tous les fichiers de langue doivent utiliser l'encodage UTF-8 et les fichiers ne doivent pas contenir de BOM.
+//
+// Les caractères de remplacement peuvent désormais contenir des informations sur les commandes, par exemple au lieu de
+// 'Page %s de %s ", vous pouvez (et devez) écrire " Page %1$s de %2$s ", cela permet
+// aux traducteurs de réorganiser la sortie des données tout en s'assurant qu'elles restent correctes
+//
+// Vous n'en avez pas besoin lorsque des caractères de remplacement uniques sont utilisés, par exemple, "Message %d" est suffisant.
+// De même, lorsqu'une chaîne de caractères ne contient que deux caractères de remplacement qui sont utilisés pour encadrer un texte
+// dans une url, il n'est pas nécessaire de spécifier un ordre, par exemple "Cliquez sur %ICI%s" est suffisant
+//
+// Quelques caractères que vous pouvez copier/coller :
+// ’ » “ ” …
+//
+
 $lang = array_merge($lang, array(
 
 	'PLURAL_RULE'											=> 2,
@@ -28,7 +44,7 @@ $lang = array_merge($lang, array(
 	'ACP_DIGESTS_USER_DEFAULT_SETTINGS'						=> 'Options par défaut de l&apos;utilisateur',
 	'ACP_DIGESTS_USER_DEFAULT_SETTINGS_EXPLAIN'				=> 'Ces réglages permettent aux administrateurs de définir les valeurs par défaut qu&apos;auront les options du résumé lorsqu&apos;un utilisateur s&apos;y abonne.',
 	'ACP_DIGESTS_EDIT_SUBSCRIBERS'							=> 'Éditer les abonnés',
-	'ACP_DIGESTS_EDIT_SUBSCRIBERS_EXPLAIN'					=> 'Cette page permet de voir qui reçoit ou non le résumé. Vous pouvez abonner ou désabonner des membres de façon sélective, et éditer tous les détails d&apos;un résumé lié à l&apos;abonnement d&apos;un utilisateur. En cochant les cases dans la première colonne en regard du nom des membres à considérer, vous pouvez les abonner avec les valeurs par défaut ou les désabonner. Pour cela utilisez les commandes situées au bas de la page, puis cliquez sur Envoyer. Veuillez également noter que vous pouvez utiliser ces commandes pour classer et filtrer la liste en conjonction avec le bouton Go.',
+	'ACP_DIGESTS_EDIT_SUBSCRIBERS_EXPLAIN'					=> 'Cette page vous permet de voir qui reçoit ou non les résumés et de modifier leurs paramètres individuels de résumé. <strong>Les actions s&apos;appliquent aux lignes cochées uniquement.</strong> Utilisez les liens "Tout cocher" et "Tout décocher" pour cocher et décocher rapidement toutes les lignes de la page.<br><br>Vous pouvez rapidement abonner des utilisateurs à vos résumés par défaut, ou désabonner des utilisateurs, en cochant les lignes des utilisateurs concernés, puis en sélectionnant "Abonner les lignes cochées uniquement avec les valeurs par défaut" ou "Désabonner les lignes cochées uniquement" depuis le menu local "Avec la sélection" dans le coin inférieur droit de la page.',
 	'ACP_DIGESTS_BALANCE_LOAD'								=> 'Équilibrer la charge',
 	'ACP_DIGESTS_BALANCE_LOAD_EXPLAIN'						=> 'Si le nombre de résumés envoyés est trop important à certaines heures de la journée, des problèmes de performance risquent de survenir. Cette page permet d&apos;équilibrer la répartition des abonnés au résumé de manière à ce qu&apos;un même nombre de résumés environ soit envoyé aux heures souhaitées. La table ci-dessous affiche le nombre et le noms des abonnés au résumé pour chacune des heures avec <strong>les heures surchargées affichées en gras</strong>. Cette fonction met à jour a minima les heures d&apos;envoi des résumés. Les modifications ne surviennent qu&apos;aux heures pour lesquelles le nombre d&apos;abonnés excède la charge moyenne et ne s&apos;appliquent qu&apos;aux abonnés de la tranche horaire correspondante. <em>Attention</em>: les abonnés risquent de ne pas apprécier que l&apos;heure de leur abonnenment soit modifiée et pourront recevoir une notification par courriel, en fonction du réglage dans les réglages généraux du résumé. Si vous le souhaitez, vous pouvez limiter l&apos;équilibrage à un type de résumé, équilibrer certaines heures et appliquer l&apos;équilibrage à certaines heures.',
 	'ACP_DIGESTS_BALANCE_OPTIONS'							=> 'Options d&apos;équilibrage',
@@ -61,7 +77,6 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_DIGESTS_GENERAL'							=> '<strong>Réglages généraux des résumés modifiés.</strong>',
 	'LOG_CONFIG_DIGESTS_HOUR_RUN'							=> '<strong>Envoi des résumés le %1$s à %2$02d h UTC</strong>',
 	'LOG_CONFIG_DIGESTS_INCONSISTENT_DATES'					=> '<strong>Une erreur inhabituelle est survenue. Aucune heure n&apos;a été traitée car la dernière heure à laquelle les résumés ont été envoyés avec succès (daté du %1$d) est située après la date de préparation des résumés (daté du %2$d).</strong>',
-	'LOG_CONFIG_DIGESTS_LOG_ABEND'							=> '<strong>L&apos;arrêt du générateur de courriels des résumés est anormal. Consultez le journal des erreurs pour plus de détails.</strong>',
 	'LOG_CONFIG_DIGESTS_LOG_END'							=> '<strong>arrêt du générateur de courriels des résumés</strong>',
 	'LOG_CONFIG_DIGESTS_LOG_ENTRY_BAD'						=> '<strong>Impossible d&apos;envoyer un résumé à %1$s ((%2$s). Ce problème doit être analysé et corrigé dans la mesure où cela signale probablement un problème d&apos;envoi de courriel plus général.</strong>',
 	'LOG_CONFIG_DIGESTS_LOG_ENTRY_BAD_NO_EMAIL'				=> '<strong>Impossible d&apos;envoyer un résumé à %s. Ce problème doit être analysé et corrigé dans la mesure où cela signale probablement un problème d&apos;envoi de courriel plus général.</strong>',
@@ -83,6 +98,8 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_DIGESTS_MASS_SUBSCRIBE_UNSUBSCRIBE'			=> '<strong>Éxécution d&apos;une action d&apos;abonnement ou de désabonnement groupé au résumé</strong>',
 	'LOG_CONFIG_DIGESTS_NO_ALLOWED_FORUMS'					=> '<strong>Attention : l&apos;abonné %s n&apos;a aucune permission sur le forum, dans la mesure où il y a des forums requis, les résumés seront toujours vides.</strong>',
 	'LOG_CONFIG_DIGESTS_NO_BOOKMARKS'						=> '<strong>Attention : l&apos;abonné %s souhaite des sujets cochés dans son résumé, mais il n&apos;a aucun sujet coché.</strong>',
+	'LOG_CONFIG_DIGESTS_NO_RESOURCES'						=> '<strong>
+	Arrêt anormal du générateur d&apos;envoi des résumés. Les ressources système sont insuffisantes pour continuer à traiter les résumés. Une erreur a été générée lors de la création d&apos;un résumé pour "%1$s" à %2$d UTC. Vous devriez peut-être mettre à niveau votre hébergement pour envoyer les résumés de manière fiable.</strong>',
 	'LOG_CONFIG_DIGESTS_NOTIFICATION_ERROR'					=> '<strong>Impossible d&apos;envoyer une notification par courriel du résumé généré par un administrateur à %s.</strong>',
 	'LOG_CONFIG_DIGESTS_NOTIFICATION_SENT'					=> '<strong>Un courriel a été envoyé à %1$s (%2$s) indiquant que les réglages de son résumé ont été modifiés.</strong>',
 	'LOG_CONFIG_DIGESTS_REGULAR_CRON_RUN'					=> '<strong>Demande de lancement du générateur de courriels par un cron (phpBB) régulier</strong>',

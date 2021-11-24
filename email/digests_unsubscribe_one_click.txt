@@ -1,0 +1,7 @@
+Bonjour {{ USERNAME }},
+
+Comme vous l'avez souhaité, vous n'êtes plus abonné à la liste de diffusion des résumés du forum {{ FORUM_NAME }}.
+
+Cordialement,
+
+L'équipe d'administration du forum {{ FORUM_NAME }}
