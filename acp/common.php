@@ -17,6 +17,22 @@ if (empty($lang) || !is_array($lang))
 	$lang = array();
 }
 
+// NOTE À L'ATTENTION DES DÉVELOPPEURS
+//
+// Tous les fichiers de langue doivent utiliser l'encodage UTF-8 et les fichiers ne doivent pas contenir de BOM.
+//
+// Les caractères de remplacement peuvent désormais contenir des informations sur les commandes, par exemple au lieu de
+// 'Page %s de %s ", vous pouvez (et devez) écrire " Page %1$s de %2$s ", cela permet
+// aux traducteurs de réorganiser la sortie des données tout en s'assurant qu'elles restent correctes
+//
+// Vous n'en avez pas besoin lorsque des caractères de remplacement uniques sont utilisés, par exemple, "Message %d" est suffisant.
+// De même, lorsqu'une chaîne de caractères ne contient que deux caractères de remplacement qui sont utilisés pour encadrer un texte
+// dans une url, il n'est pas nécessaire de spécifier un ordre, par exemple "Cliquez sur %ICI%s" est suffisant
+//
+// Quelques caractères que vous pouvez copier/coller :
+// ’ » “ ” …
+//
+
 $lang = array_merge($lang, array(
 	'DIGESTS_WEEKDAY' 					=> 'Dimanche,Lundi,Mardi,Mercredi,Jeudi,Vendredi,Samedi',
 ));
@@ -44,7 +60,6 @@ $lang = array_merge($lang, array(
 	'DIGESTS_BALANCE_LOAD'									=> 'Équilibrer la charge',
 	'DIGESTS_BALANCE_HOURS'									=> 'Équilibrer les heures',
 	'DIGESTS_BASED_ON'										=> '(Basée sur UTC%+d)',
-	'DIGESTS_CLEAR_CACHE_NOT_RUN'							=> 'Les résumés mis en cache n‘ont pas été supprimés car la fonctionnalité n‘a pas été sélectionnée.',	
 	'DIGESTS_COLLAPSE'										=> 'Reployer',
 	'DIGESTS_COMMA'											=> ', ',		// Used  in salutations and to separate items in lists
 	'DIGESTS_CREATE_DIRECTORY_ERROR'						=> 'Impossible de créer le dossier %s. Cela peut être dû à des autorisations insuffisantes. Les autorisations sur le dossier doivent être définies en écriture publique (777 sur les systèmes Unix).',
@@ -53,7 +68,8 @@ $lang = array_merge($lang, array(
 	'DIGESTS_CUSTOM_STYLESHEET_PATH_EXPLAIN'				=> 'Ce réglage ne s&apos;applique que si l&apos;option Activer la feuille de style personnalisée est activée. Si elle est activée, cette feuille de style sera appliquée à tous les résumés stylés. Le chemin d&apos;accès doit être un chemin d&apos;accès relatif à votre dossier de styles phpBB qui doit normalement se trouver dans le sous-dossier theme. Nota : vous êtes responsables de la création de la feuille de style et de son placement dans un fichier ayant pour nom celui saisi ici à l&apos;endroit approprié sur votre serveur. Exemple: prosilver/theme/digest_stylesheet.css. Pour des informations relatives à la création de feuilles de style, cliquez <a href="http://www.w3schools.com/css/">ici</a>.',
 	'DIGESTS_DEBUG'											=> 'Activer le débogage des résumés',
 	'DIGESTS_DEBUG_EXPLAIN'									=> 'Utilisé pour le débogage technique. Cette fonction permet dl&apos;écrire certaines informations essentielles au dépannage dans le journal dl&apos;administration, telles que les requêtes à la base de données utilisées pour assembler les résumés. Vous devez normalement avoir des compétences en matière de développement pour interpréter ces informations.',
-	'DIGESTS_DEFAULT'										=> 'Abonner en utilisant les valeurs par défaut',
+	'DIGESTS_DEFAULT'										=> 'Abonner les lignes cochées uniquement en utilisant les valeurs par défaut',
+	'DIGESTS_DEFAULT_SHORT'									=> 'S&apos;abonner en utilisant les valeurs par défaut',
 	'DIGESTS_DAILY_ONLY'									=> 'Résumés journaliers seulement',
 	'DIGESTS_ENABLE_AUTO_SUBSCRIPTIONS'						=> 'Activer l&apos;abonnement automatique',
 	'DIGESTS_ENABLE_AUTO_SUBSCRIPTIONS_EXPLAIN'				=> 'Sélectionnez Oui, si vous souhaitez que les nouveaux membres qui s&apos;inscrivent sur le forum reçoivent automatiquement le résumé. Les réglages par défaut définis dans la rubrique &ldquo;Options par défaut de l&apos;utilisateur&rdquo; seront automatiquement appliqués. L&apos;activation de cette option n&apos;abonne <em>pas</em> : les personnes qui ne sont pas abonnées, les membres inactifs ou encore les nouveaux membres qui choisissent de ne pas recevoir le résumé lors de leur enregistrement au forum. Vous pouvez abonner des utilisateurs individuellement en utilisant la rubrique &ldquo;Éditer les abonnés&rdquo;, ou abonner plusieurs utilisateurs en même temps depuis la rubrique &ldquo;Abonnement/Désabonnement groupé&rdquo;.',
@@ -75,7 +91,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_HAS_UNSUBSCRIBED'								=> 'S&apos;est désabonné',
 	'DIGESTS_HOUR_SENT'										=> 'Heure d&apos;envoi (basée sur UTC%+d)',
 	'DIGESTS_HOUR_SENT_GMT'									=> 'Heure d&apos;envoi par défaut (UTC)',
-	'DIGESTS_IGNORE'										=> 'Ignorer les lignes cochées',
+	'DIGESTS_IGNORE'										=> 'Modifier les lignes cochées uniquement',
 	'DIGESTS_ILLOGICAL_DATE'								=> 'Vos date et heure sont invalides. Veuillez les corriger et les envoyer à nouveau en utilisant le format de date et heure : AAAA-MM-JJ HH:MM:SS.',
 	'DIGESTS_INCLUDE_ADMINS'								=> 'Inclure les administrateurs',
 	'DIGESTS_INCLUDE_ADMINS_EXPLAIN'						=> 'Permet d&apos;abonner ou de désabonner les administrateurs en plus des utilisateurs normaux.',
@@ -88,6 +104,7 @@ $lang = array_merge($lang, array(
 																),
 																	'DIGESTS_LOWERCASE_DIGEST_TYPE'							=> 'Indiquer la fréquence d&apos;envoi du résumé en lettres minuscules',
 	'DIGESTS_LOWERCASE_DIGEST_TYPE_EXPLAIN'					=> 'En Anglais, le titre du résumé sera par exemple &ldquo;My board name Daily Digest&rdquo;. Dans certaines langues &ldquo;Digest Daily&rdquo; précède le nom du forum. En indiquant Oui, la fréquence du résumé apparaîtra ainsi &ldquo;Résumé journalier de mon forum&rdquo;, avec la première lettre de la fréquence d&apos;envoi en minuscule.',
+	'DIGESTS_MAILER_NOT_RUN'								=> 'Le générateur de courriels n&apos;a pas été lancé car il n&apos;a pas été activé ou parce qu&apos;il n&apos;y a pas eu de requête pour effacer le dossier digests.',
 	'DIGESTS_MAILER_RAN_SUCCESSFULLY'						=> 'Le générateur de courriels a été lancé avec succès.',
 	'DIGESTS_MAILER_RAN_WITH_ERROR'							=> 'Une erreur est survenue avec le générateur de courriels. Un ou plusieurs résumés ont pu être générés avec succès. Les journaux d&apos;administration et d&apos;erreurs phpBB peuvent contenir plus d&apos;information.',
 	'DIGESTS_MAILER_SPOOLED'								=> 'Tous les résumés créés pour la date et l&apos;heure ont été enregistrés dans le dossier store/phpbbservices/digests.',
@@ -121,6 +138,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_REPLY_TO_EMAIL_ADDRESS_EXPLAIN'				=> 'Lorsque les utilisateurs reçoivent un résumé, cette adresse électronique apparaîtra dans le champ &ldquo;Répondre&rdquo;. Si le champ est laissé vide, l&apos;adresse électronique de contact de votre forum sera utilisé. Faites attention lorsque vous utilisez une adresse électronique dont le domaine ne correspond pas à celui sur lequel est hébergé votre Forum, dans la mesure où votre serveur de courriels ou le serveur de courriels des utilisateurs pourra interprêter le courriel comme étant du spam.',
 	'DIGESTS_RESET_CRON_RUN_TIME'							=> 'Réinitialiser le générateur de courriels',
 	'DIGESTS_RESET_CRON_RUN_TIME_EXPLAIN'					=> 'La réintialisation du générateur de courriels, entraîne la suppression de tous les résumés stockés dans la file d&apos;attente. Aussi, lors de son premier lancement après la réinitialisation, seuls les résumés de l&apos;heure courante seront générés. La réinitialisation peut être utile lorsque vous avez terminé de tester les résumés ou si le cron phpBB n&apos;a pas fonctionné depuis un certain temps.',
+	'DIGESTS_RUN_TEST'										=> 'Lancer le générateur de courriels',
 	'DIGESTS_RUN_TEST_CLEAR_SPOOL'							=> 'Effacer le dossier store/phpbbservices/digests',
 	'DIGESTS_RUN_TEST_CLEAR_SPOOL_ERROR'					=> 'Impossible de supprimer tous les fichiers dans le dossier store/phpbbservices/digests. Cela est peut-être dû à des problèmes de permissions ou parce que le dossier a été supprimé. Les permissions de fichier du dossier doivent être réglées sur écriture publique (777 sur les systèmes Unix).',
 	'DIGESTS_RUN_TEST_CLEAR_SPOOL_EXPLAIN'					=> 'Si vous choisissez Oui, tous les fichiers dans le dossier store/phpbbservices/digests seront effacés avant que tout nouveau résumé n&apos;y soit écrit. Vous pouvez également le faire sans avoir à lancer le générateur de courriels',
@@ -131,11 +149,11 @@ $lang = array_merge($lang, array(
 	'DIGESTS_RUN_TEST_SEND_TO_ADMIN'						=> 'Envoyer tous les résumés à l&apos;adresse électronique spécifiée',
 	'DIGESTS_RUN_TEST_SEND_TO_ADMIN_EXPLAIN'				=> 'Si vous émettez des résumés par courriel pendant une phase de test, tous les résumés seront envoyés à l&apos;adresse spécifiée dans le champ ci-dessous. <em>Nota</em> : si vous avez choisi d&apos;envoyer des courriels vers des fichiers, ce réglage sera ignoré. Si vous choisissez Oui alors qu&apos;aucune adresse n&apos;a été spécifiée, l&apos;adresse électronique de contact du forum sera utilisée. <em>Attention</em> : Certains serveurs de courriels pourraient interpréter ce grand volume de mails envoyés sur une brève période de temps depuis une même adresse comme étant du spam ou ayant un contenu inaproprié. À activer avec précaution. Si vous choisissez Non, les résumés seront aussi envoyés aux abonnés, ce qui pourrait les perturber.',
 	'DIGESTS_RUN_TEST_SPOOL'								=> 'Écrire les résultats dans des fichiers au lieu de les envoyer par courriels',
-	'DIGESTS_RUN_TEST_CLEAR_SPOOL_EXPLAIN'					=> 'Si oui, tous les fichiers de ce dossier seront effacés avant que les résumés ne soient stockés.',
+	'DIGESTS_RUN_TEST_SPOOL_EXPLAIN'						=> 'Évite que les résumés ne soient envoyés par courriels. À la place chaque résumé est écrit dans un fichier du dossier store/phpbbservices/digests dont le nom à le format suivant : nom d&apos;utilisateur-aaaa-mm-jj-hh-uniqueID.html ou nom d&apos;utilisateur-aaaa-mm-jj-hh-uniqueID.txt. (les fichiers avec un suffixe .txt sont des résumés textuel uniquement.) nom d&apos;utilisateur est le nom d&apos;utilisateur sur le forum phpBB. aaaa indique l&apos;année, mm le mois, jj le jour dans le mois et hh l&apos;heure en UTC. Pour visualiser ces fichiers, commencez par les télécharger dans un dossier local. Visualisez le fichier dans un navigateur en utilisant son mode local : CTRL+O ou CMD+O (Mac). <em>Nota</em> : utilisez bien la lettre O, et pas le chiffre 0.',
 	'DIGESTS_SALUTATION_FIELDS'								=> 'Sélectionner les champs de salutation',
 	'DIGESTS_SALUTATION_FIELDS_EXPLAIN'						=> 'Saisissez, le cas échéant, le nom des champs de profil personnalisé que vous souhaitez remplacer par le nom d&apos;utilisateur pour la salutation dans le résumé. Si laissé vide, le nom d&apos;utilisateur est utilisé. Saisissez le(s) nom(s) d&apos;identification des champs figurant sur la page des champs de profil personnalisés. Séparez le nom des champs par des virgules. <em> Remarque : </ em> Les champs doivent être du type "Champ de texte unique". Si aucun des champs de profil personnalisé n&apos;existe ou s&apos;il n&apos;y a pas de valeur dans les champs de l&apos;abonné, le nom d&apos;utilisateur sera utilisé à la place. Exemple: prénom, nom de famille (si vous avez créé des champs de profil personnalisés avec ces noms). Un espace sera placé entre chaque champ de profil personnalisé pour la salutation dans le résumé.',
 	'DIGESTS_SEARCH_FOR_MEMBER'								=> 'Rechercher des membres',
-	'DIGESTS_SEARCH_FOR_MEMBER_EXPLAIN'						=> 'Saisissez une partie ou l&apos;intégralité du nom ou encore l&apos;adresse électronique du membre à rechercher puis pressez Retour ou Entrée. Laissez vide pour voir tous les membres. Les recherches ne sont pas sensibles à la casse. <em>Note</em>: Le symbole @ est nécessaire dans le champ pour qu&apos;une rechercher par courriel puisse s&apos;exécuter.',
+	'DIGESTS_SEARCH_FOR_MEMBER_EXPLAIN'						=> 'Saisissez le nom complet ou partiel du membre ou l&apos;adresse électronique à rechercher, puis appuyez sur <strong>Go</strong>. Laissez vide pour désactiver ce type de recherche. Les recherches de noms de membres ne sont pas sensibles à la casse. <em>Note</em> : Il doit y avoir un symbole @ dans le champ pour qu&apos;une recherche d&apos;email soit effectuée.',
 	'DIGESTS_SELECT_FORUMS_ADMIN_EXPLAIN'					=> 'Seuls les forums que l&apos;utilisateur est autorisé à lire sont affichés dans la liste. Si vous souhaitez donner aux utilisateurs des accès à d&apos;autres forums non affichés ici, étendez leur permission d&apos;utilisateur du forum ou de groupe. Notez que vous pouvez aussi ajuster les forums qui apparaissent dans leur résumé. Si leur type de résumé est &ldquo;Aucun&rdquo; aucun résumé ne leur sera envoyé.',
 	'DIGESTS_SHOW'											=> 'Afficher',
 	'DIGESTS_SHOW_EMAIL'									=> 'Afficher l&apos;adresse électronique dans le journal',
@@ -143,7 +161,8 @@ $lang = array_merge($lang, array(
 	'DIGESTS_SHOW_FORUM_PATH'								=> 'Afficher le chemin d&apos;accès du forum dans le résumé',
 	'DIGESTS_SHOW_FORUM_PATH_EXPLAIN'						=> 'Lorsque cette option est activée, les noms des catégories et des forums dans le lequel se trouve un forum vont être affichés. Par exemple: &ldquo;Catégorie 1 &#8249; Forum 1 &#8249; Catégorie A &#8249; Forum B&rdquo;, en y incluant toute la hiérarchie dans laquelle se trouve votre forum. Sinon, seul le nom du forum sera affiché, comme &ldquo;Forum B&rdquo; dans l&apos;exemple précédent.',
 	'DIGESTS_SORT_ORDER'									=> 'Ordre de classement',
-	'DIGESTS_STOPPED_SUBSCRIBING'							=> 'Les désabonnés',
+	'DIGESTS_SORTING_AND_FILTERING'							=> 'Classement et filtrage',
+	'DIGESTS_STOPPED_SUBSCRIBING'							=> 'S&apos;est désinscrit',
 	'DIGESTS_STRIP_TAGS'									=> 'Balises HTML à supprimer dans le résumé',
 	'DIGESTS_STRIP_TAGS_EXPLAIN'							=> 'Les serveurs de courriels peuvent rejeter des courriels ou blacklister les émetteurs lorsque le résumé comporte certaines balises HTML, ou encore placer le résumé dans le dossier des spam. Indiquez le nom des balises à exclure (sans les caractères &lt; ou &gt;), en les séparant par des virgules. Par exemple, pour supprimer les balises vidéo et iframe, saisissez &ldquo;video,iframe&rdquo; dans ce champ. Évitez de saisir le nom de balises usuelles telles que h1, p et div dans la mesure où elles sont nécessaires à la mise en forme du résumé.',
 	'DIGESTS_SUBSCRIBE_EDITED'								=> 'Les réglages liés à votre abonnement au résumé ont été modifiés',
@@ -157,17 +176,18 @@ $lang = array_merge($lang, array(
 	'DIGESTS_SUBSCRIBERS_MONTHLY'                           => 'Abonnés mensuels',
 	'DIGESTS_UNLINK_FOREIGN_URLS'							=> 'Supprimer les URL étrangères des résumés',
 	'DIGESTS_UNLINK_FOREIGN_URLS_EXPLAIN'					=> 'Supprime les liens vers d&apos;autres domaines dans les résumés. Certains systèmes de messagerie signalent les courriels contenant des liens vers d&apos;autres domaines comme étant du spam potentiel. Cela peut entraîner l&apos;envoi des résumés dans le dossier de spam ou empêcher l&apos;envoi de résumés par le serveur de messagerie sortant.',
-	'DIGESTS_UNSUBSCRIBE'									=> 'Désabonner',
+	'DIGESTS_UNSUBSCRIBE'									=> 'Désabonner les lignes cochées uniquement',
 	'DIGESTS_UNSUBSCRIBE_SUBJECT'							=> 'Vous avez été désabonnés de la réception par courriels du résumé',
 	'DIGESTS_UNSUBSCRIBED'									=> 'Les non abonnés',
 	'DIGESTS_USER_DIGESTS_MAX_DISPLAY_WORDS'				=> 'Nombre maximum de mots à afficher dans un post',
 	'DIGESTS_USER_DIGESTS_MAX_DISPLAY_WORDS_EXPLAIN'		=> 'Saisir -1 pour afficher l&apos;intégralité du texte du post par défaut. Saisir zéro (0) signifie que l&apos;utilisateur ne verra pas du tout le texte du post.',	
 	'DIGESTS_USER_DIGESTS_PM_MARK_READ'						=> 'Marquer les messages privés comme lus lorsqu&apos;ils apparaissent dans le résumé',
+	'DIGESTS_NO_USERS_SELECTED'								=> 'Aucun changement n&apos;a été effectué ! Vous devez cocher une ou plusieurs cases pour modifier l&apos;abonnement des utilisateurs.',
 	'DIGESTS_USERS_PER_PAGE'								=> 'Nombre d&apos;abonnés par page',
 	'DIGESTS_USERS_PER_PAGE_EXPLAIN'						=> 'Permet de contrôler le nombre de lignes d&apos;abonnés dans la liste affichée lorsque la rubrique &ldquo;Éditer les abonnés&rdquo; est sélectionnée. Il est recommendé de laisser cette valeur à 20. En saisissant une valeur trop élevée vous risquez d&apos;entraîner une erreur PHP max_input_vars.',
 	'DIGESTS_WEEKLY_DIGESTS_DAY'							=> 'Jour d&apos;envoi des résumés hebdomadaires',
 	'DIGESTS_WEEKLY_DIGESTS_DAY_EXPLAIN'					=> 'Le jour de la semaine se base sur l&apos;UTC (Temps Universel Coordonné). En fonction de l&apos;heure souhaitée, les abonnés de l&apos;hémisphère occidental peuvent recevoir leur résumé hebdomadaire un jour plus tôt que prévu.',
 	'DIGESTS_WEEKLY_ONLY'									=> 'Résumés hebdomadaires seulement',
-	'DIGESTS_WITH_SELECTED'									=> 'Action sur les éléments sélectionnés',
+	'DIGESTS_WITH_SELECTED'									=> 'Avec la sélection',
 
 ));
