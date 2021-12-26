@@ -110,6 +110,7 @@ Si vous avez des questions ou si vous souhaitez nous contacter veuillez adresser
 	'DIGESTS_NO_POST_TEXT'				=> 'N&apos;afficher aucun texte de posts',
 	'DIGESTS_NO_PRIVATE_MESSAGES'		=> 'Vous n&apos;avez pas de nouveaux messages privés  ou de messages privés non lus.',
 	'DIGESTS_NO_TIMEZONE'				=> 'Vous devez spécifier <a href="%s">votre fuseau horaire/a> dans votre profil avant d&apos;envoyer des résumés.',
+	'DIGESTS_NO_FILES'					=> '<em>Aucun fichier</em>',	
 	'DIGESTS_NONE'						=> 'Aucun (Non abonné)',
 	'DIGESTS_ON'						=> 'le',
 	'DIGESTS_OPEN_QUOTE'				=> '&ldquo;',
