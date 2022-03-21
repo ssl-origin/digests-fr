@@ -35,7 +35,7 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, array(
 
-	'PLURAL_RULE'											=> 2,
+	'PLURAL_RULE'											=> 1,
 
 	'ACP_CAT_DIGESTS'										=> 'Digests',
 	'ACP_DIGESTS_BALANCE_LOAD'								=> 'Équilibrer la charge',
@@ -49,10 +49,15 @@ $lang = array_merge($lang, array(
 	'ACP_DIGESTS_EDIT_SUBSCRIBERS_EXPLAIN'					=> 'Cette page vous permet de voir qui reçoit ou ne reçoit pas de résumés et de modifier leurs paramètres de résumé individuels.<br><br>Vous pouvez rapidement inscrire les utilisateurs avec vos valeurs par défaut de résumé, ou désinscrire les utilisateurs, en vérifiant leurs lignes, puis en sélectionnant « S‘inscrire coché lignes utilisant uniquement les valeurs par défaut » ou « Désinscrire les lignes cochées uniquement » dans la liste déroulante « Avec sélectionné » dans le coin inférieur droit de la page.',
 	'ACP_DIGESTS_MASS_SUBSCRIBE_UNSUBSCRIBE'				=> 'Abonnement/désabonnement de masse',
 	'ACP_DIGESTS_MASS_SUBSCRIBE_UNSUBSCRIBE_EXPLAIN'		=> 'Cette fonctionnalité permet aux administrateurs d‘abonner ou de désabonner facilement tous les membres de votre forum en une seule fois. Les paramètres par défaut des résumés sont utilisés pour inscrire les membres. Si un membre a déjà un abonnement au résumé, un abonnement de masse conservera ses paramètres de résumé. Vous ne pouvez pas spécifier les forums auxquels vous serez abonné. Les utilisateurs seront abonnés à tous les forums qu‘ils peuvent lire. <strong>Attention</strong> : les abonnés peuvent ne pas être d‘accord s‘ils sont abonnés ou désabonnés sans leur consentement.', 
+	'ACP_DIGESTS_REPORTS'									=> 'Rapport d‘envoi de courrier',
+	'ACP_DIGESTS_REPORTS_EXPLAIN'							=> 'Cette page vous permet de voir les résumés qui ont été envoyés pour diverses dates et heures, ainsi que des informations sur les performances. Cliquez sur l‘en-tête d‘une colonne pour en modifier le tri. Cliquez sur la valeur de l‘envoi ou du saut d‘une ligne pour obtenir des détails sur le moment où les actions d‘envoi ou de saut ont eu lieu pour les abonnés de l‘heure en question.',
 	'ACP_DIGESTS_RESET_CRON_RUN_TIME'						=> 'Réinitialiser le générateur de courriels',
 	'ACP_DIGESTS_RESET_CRON_RUN_TIME_EXPLAIN'				=> '',
+	'ACP_DIGESTS_SETTINGS'									=> 'Paramètres des résumés',
 	'ACP_DIGESTS_TEST'										=> 'Lancer le générateur de courriels manuellement',
 	'ACP_DIGESTS_TEST_EXPLAIN'								=> 'Cette fonctionnalité vous permet d‘exécuter manuellement des résumés pour les tests initiaux ou le dépannage. Vous pouvez également l‘utiliser pour recréer des résumés pendant des heures lorsqu‘ils n‘ont peut-être pas été envoyés. Une seule heure de résumés est créée et aucune donnée utilisateur n‘est modifiée.<br><br> <strong>Abonnés susceptibles de recevoir des résumés pour l‘heure en cours :</strong> %s',
+	'ACP_DIGESTS_USER_DEFAULT_SETTINGS'						=> 'Paramètres par défaut de l‘utilisateur',
+	'ACP_DIGESTS_USER_DEFAULT_SETTINGS_EXPLAIN'				=> 'Ces paramètres permettent aux administrateurs de définir les valeurs par défaut que les utilisateurs voient lorsqu‘ils s‘abonnent à un résumé.',
 	
 	'LOG_CONFIG_DIGESTS_BAD_DIGEST_TYPE'					=> '<strong>Attention : l&apos;abonné %1$s a un mauvais type de résumé %2$s. Un résumé journalier est recommandé.</strong>',
 	'LOG_CONFIG_DIGESTS_BAD_SEND_HOUR'						=> '<strong>L&apos;heure d&apos;envoi du résumé de l&apos;utilisateur %1$s est invalide. Elle est à %2$d. Le nombre doit être compris entre >= 0 et < 24.</strong>',
