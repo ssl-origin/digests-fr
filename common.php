@@ -165,8 +165,8 @@ Si vous avez des questions ou si vous souhaitez nous contacter veuillez adresser
 	'DIGESTS_TAG_REPLACED'				=> '<strong>Note : le contenu a été supprimé pour des raisons de sécurité. Cliquez sur le lien du post ou du sujet pour visualiser l&apos;intégralité du contenu du post.</strong>',
 	'DIGESTS_TITLE'						=> 'Résumés',
 	'DIGESTS_TRANSLATED_BY'				=> 'Traduit par',
-	'DIGESTS_TRANSLATOR_NAME'			=> 'Philippe Bonnaure - www.macvf.fr',	// Leave null string to suppress translator name
-	'DIGESTS_TRANSLATOR_CONTACT'		=> 'https://www.macvf.fr',	// Leave null string to suppress contact info, if used use: mailto:name@emailaddress.com or a URL if you have a website.
+	'DIGESTS_TRANSLATOR_NAME'			=> 'Fred Rimbert - forums.caforum.fr',	// Leave null string to suppress translator name
+	'DIGESTS_TRANSLATOR_CONTACT'		=> 'https://forums.caforum.fr',	// Leave null string to suppress contact info, if used use: mailto:name@emailaddress.com or a URL if you have a website.
 	'DIGESTS_TOC'						=> 'Sommaire',
 	'DIGESTS_TOC_EXPLAIN'				=> 'Si le forum est très actif, vous pouvez inclure un sommaire dans votre résumé. Dans les résumés stylés, le sommaire comporte des liens qui permettent d&apos;aller à un post en particulier ou à un message privé dans le résumé.',
 	'DIGESTS_UNKNOWN'					=> 'Inconnu',
