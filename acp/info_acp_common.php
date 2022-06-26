@@ -29,8 +29,8 @@ if (empty($lang) || !is_array($lang))
 // De même, lorsqu'une chaîne de caractères ne contient que deux caractères de remplacement qui sont utilisés pour encadrer un texte
 // dans une url, il n'est pas nécessaire de spécifier un ordre, par exemple "Cliquez sur %ICI%s" est suffisant
 //
-// Quelques caractères que vous pouvez copier/coller :
-// ’ » “ ” …
+// Quelques caractères que vous pouvez copier/coller :
+// ’ « » “ ” …
 //
 
 $lang = array_merge($lang, array(
@@ -39,10 +39,10 @@ $lang = array_merge($lang, array(
 
 	'ACP_CAT_DIGESTS'										=> 'Digests',
 	'ACP_DIGESTS_BALANCE_LOAD'								=> 'Équilibrer la charge',
-	'ACP_DIGESTS_BALANCE_LOAD_EXPLAIN'						=> 'Si trop de résumés envoyés à certaines heures causent des problèmes de performance, cette page rééquilibrera les abonnements aux résumés afin que le même nombre de résumés environ soit envoyé à chaque heure souhaitée. Le tableau ci-dessous montre le nombre actuel ainsi que le nom des abonnés aux résumés pour chaque heure, avec un marquage en gras des <strong>heures sur-allouées</strong>. Cette fonction met à jour les heures d’envoi des résumés de façon minimale. Les modifications ne se produisent que pour les heures où le nombre d’abonnés dépasse la charge moyenne, et seulement pour les abonnés qui dépassent la moyenne horaire pour cette heure. <em>Attention</em> : certains abonnés pourraient être contrariés par le fait que leurs heures d’abonnement ont été modifiées et pourraient recevoir une notification par courriel, selon le paramètre défini dans les paramètres généraux des résumés. Si vous le souhaitez, vous pouvez limiter l’équilibrage à un type de résumé, équilibrer pour des heures spécifiques et appliquer l’équilibrage à des heures spécifiques.',
+	'ACP_DIGESTS_BALANCE_LOAD_EXPLAIN'						=> 'Si trop de résumés envoyés à certaines heures causent des problèmes de performance, cette page rééquilibrera les abonnements aux résumés afin que le même nombre de résumés environ soit envoyé à chaque heure souhaitée. Le tableau ci-dessous montre le nombre actuel ainsi que le nom des abonnés aux résumés pour chaque heure, avec un marquage en gras des <strong>heures sur-allouées</strong>. Cette fonction met à jour les heures d’envoi des résumés de façon minimale. Les modifications ne se produisent que pour les heures où le nombre d’abonnés dépasse la charge moyenne, et seulement pour les abonnés qui dépassent la moyenne horaire pour cette heure. <em>Attention</em> : certains abonnés pourraient être contrariés par le fait que leurs heures d’abonnement ont été modifiées et pourraient recevoir une notification par courriel, selon le paramètre défini dans les paramètres généraux des résumés. Si vous le souhaitez, vous pouvez limiter l’équilibrage à un type de résumé, équilibrer pour des heures spécifiques et appliquer l’équilibrage à des heures spécifiques.',
 	'ACP_DIGESTS_BALANCE_OPTIONS'							=> 'Options d’équilibrage',
 	'ACP_DIGESTS_CLEAR_CACHED_DIGESTS'						=> 'Effacer les résumés et les rapports mis en cache',
-	'ACP_DIGESTS_CLEAR_CACHED_DIGESTS_EXPLAIN'				=> 'Cette page permet de supprimer tous les résumés mis en cache dans le répertoire /store/phpbbservices/digests. Ceux-ci peuvent être générés par le générateur de courriels manuel mais représentent une vulnérabilité de sécurité potentielle. Si des fichiers sont affichés, il est recommandé de les supprimer.<br><br>%1$d fichiers au total sont dans le cache. Noms des fichiers : %2$s.<br><br>Vous pouvez également effacer toutes les rapports statistiques générés ici.',
+	'ACP_DIGESTS_CLEAR_CACHED_DIGESTS_EXPLAIN'				=> 'Cette page permet de supprimer tous les résumés mis en cache dans le répertoire /store/phpbbservices/digests. Ceux-ci peuvent être générés par le générateur de courriels manuel mais représentent une vulnérabilité de sécurité potentielle. Si des fichiers sont affichés, il est recommandé de les supprimer.<br><br>%1$d fichiers au total sont dans le cache. Noms des fichiers : %2$s.<br><br>Vous pouvez également effacer toutes les rapports statistiques générés ici.',
 	'ACP_DIGESTS_GENERAL_SETTINGS'							=> 'Réglages généraux',
 	'ACP_DIGESTS_GENERAL_SETTINGS_EXPLAIN'					=> 'Cette rubrique présente les réglages généraux de Digests, un service permettant de générer un résumé des posts publiés sur vos forums. Veuillez noter que si les résumés doivent être délivrés rigoureusement en temps et en heure, vous devez paramétrer et activer le <a href="https://www.phpbb.com/customise/db/extension/digests_extension/faq/2716">Cron système</a> de phpBB. Sinon dès qu’il y aura trop de trafic sur le forum, les résumés de l’heure courante et des heures passées seront envoyés. Pour plus d’informations, veuillez lire les <a href="https://www.phpbb.com/customise/db/extension/digests_extension/faq">FAQs de l’extension Digests.</a>',
 	'ACP_DIGESTS_EDIT_SUBSCRIBERS'							=> 'Éditer les abonnés',
@@ -55,11 +55,11 @@ $lang = array_merge($lang, array(
 	'ACP_DIGESTS_RESET_CRON_RUN_TIME_EXPLAIN'				=> '',
 	'ACP_DIGESTS_SETTINGS'									=> 'Réglages du résumé',
 	'ACP_DIGESTS_TEST'										=> 'Lancer le générateur de courriels manuellement',
-	'ACP_DIGESTS_TEST_EXPLAIN'								=> 'Cette fonction permet de déclencher manuellement l’émission d’un résumé pour effectuer des tests de mise au point et en cas de problèmes. Vous pouvez également l’utiliser pour émettre des résumés à des heures données lorsqu’ils n’ont pas été envoyés. Seule une heure de résumé est générée et aucune donnée utilisateur n’est modifiée.<br><br> <strong>Abonnés pouvant recevoir les résumés pour l’heure courante :</strong> %s',
+	'ACP_DIGESTS_TEST_EXPLAIN'								=> 'Cette fonction permet de déclencher manuellement l’émission d’un résumé pour effectuer des tests de mise au point et en cas de problèmes. Vous pouvez également l’utiliser pour émettre des résumés à des heures données lorsqu’ils n’ont pas été envoyés. Seule une heure de résumé est générée et aucune donnée utilisateur n’est modifiée.<br><br> <strong>Abonnés pouvant recevoir les résumés pour l’heure courante :</strong> %s',
 	'ACP_DIGESTS_USER_DEFAULT_SETTINGS'						=> 'Réglages par défaut de l’utilisateur',
 	'ACP_DIGESTS_USER_DEFAULT_SETTINGS_EXPLAIN'				=> 'Ces réglages permettent aux administrateurs de définir les valeurs par défaut que les utilisateurs voient lorsqu’ils s’abonnent à un résumé.',
 	
-	'LOG_CONFIG_DIGESTS_BAD_DIGEST_TYPE'					=> '<strong>Attention : l’abonné %1$s a un mauvais type de résumé %2$s. Un résumé journalier est recommandé.</strong>',
+	'LOG_CONFIG_DIGESTS_BAD_DIGEST_TYPE'					=> '<strong>Attention : l’abonné %1$s a un mauvais type de résumé %2$s. Un résumé journalier est recommandé.</strong>',
 	'LOG_CONFIG_DIGESTS_BAD_SEND_HOUR'						=> '<strong>L’heure d’envoi du résumé de l’utilisateur %1$s est invalide. Elle est à %2$d. Le nombre doit être compris entre >= 0 et < 24.</strong>',
 	'LOG_CONFIG_DIGESTS_BALANCE_LOAD'						=> '<strong>L’équilibrage de la charge d’envoi des résumés aux abonnés a été lancé avec succès</strong>',
 	'LOG_CONFIG_DIGESTS_BOARD_DISABLED'						=> '<strong>Tentative de lancement du générateur de courriels de résumés, mais interrompu car le forum est désactivé.</strong>',
@@ -67,14 +67,14 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_DIGESTS_CLEAR_REPORT'						=> '<strong>Rapports statistiques de résumés effacés</strong>',
 	'LOG_CONFIG_DIGESTS_CLEAR_SPOOL_ERROR'					=> '<strong>Impossible d’effacer les fichiers dans le dossier cache/phpbbservices/digests. Cela peut être dû à un problème de permissions ou à un chemin d’accès incorrect. Les permissions de fichier du dossier doivent être réglées sur écriture publique (777 sur les systèmes à base Unix).</strong>',
 	'LOG_CONFIG_DIGESTS_CREATE_DIRECTORY_ERROR'				=> '<strong>Impossible de créer le dossier %s. Cela est peut-être dû à des permissions insuffisantes. Les permissions du dossier doivent être réglées en écriture publique (777 sur les systèmes Unix).</strong>',
-	'LOG_CONFIG_DIGESTS_CRITICAL_ERROR'						=> '<strong>Le générateur de courriels des résumés a eu une erreur inattendue.<br>Erreur numéro : [%1$s]<br>Erreur : %2$s<br>Programme : %3$s Ligne : %4$s</strong>',
-	'LOG_CONFIG_DIGESTS_DEBUG_POSTS_CURRENT_HOUR'			=> '<strong>Débogage : Requête abonnés post SQL : Date UTC : %s Heure UTC : %s SQL = %s</strong>',
-	'LOG_CONFIG_DIGESTS_DEBUG_SHOULD_RUN'					=> '<strong>Débogage : Doit être lancé à : %s, digest peut fonctionner après cette heure : %s</strong>',
-	'LOG_CONFIG_DIGESTS_DEBUG_SQL_CURRENT_HOUR'				=> '<strong>Débogage : Requête abonnés SQL : Date UTC : %s Heure UTC : %s SQL = %s</strong>',
+	'LOG_CONFIG_DIGESTS_CRITICAL_ERROR'						=> '<strong>Le générateur de courriels des résumés a eu une erreur inattendue.<br>Erreur numéro : [%1$s]<br>Erreur : %2$s<br>Programme : %3$s Ligne : %4$s</strong>',
+	'LOG_CONFIG_DIGESTS_DEBUG_POSTS_CURRENT_HOUR'			=> '<strong>Débogage : Requête abonnés post SQL : Date UTC : %s Heure UTC : %s SQL = %s</strong>',
+	'LOG_CONFIG_DIGESTS_DEBUG_SHOULD_RUN'					=> '<strong>Débogage : Doit être lancé à : %s, digest peut fonctionner après cette heure : %s</strong>',
+	'LOG_CONFIG_DIGESTS_DEBUG_SQL_CURRENT_HOUR'				=> '<strong>Débogage : Requête abonnés SQL : Date UTC : %s Heure UTC : %s SQL = %s</strong>',
 	'LOG_CONFIG_DIGESTS_EDIT_SUBSCRIBERS'					=> '<strong>Édition des abonnés au résumé</strong>',
-	'LOG_CONFIG_DIGESTS_EMAILING_FAILURE'					=> '<strong>Impossible d’envoyer le résumé le %1$s à %2$d h UTC. Temps d’exécution : %3$s sur %4$d secondes autorisées. %5$s Mo de mémoire ont été utilisés. Au total %6$u résumés ont été envoyés par courriel, %7$u résumés ont été ignorés et %8$u h ont été traitées avant que générateur de courriels ne soit interrompu.</strong>',
-	'LOG_CONFIG_DIGESTS_EMAILING_SUCCESS'					=> '<strong>Envoi des résumés le %1$s à %2$d h UTC. Temps d’exécution : %3$s sur %4$d secondes autorisées. %5$s Mo de mémoire ont été utilisés. Au total %6$u résumés ont été envoyés par courriel, %7$u résumés ont été ignorés et %8$u h ont été traitées.</strong>',
-	'LOG_CONFIG_DIGESTS_EXCEPTION_ERROR'					=> '<strong>L’exception PHP d’essai/capture suivante est survenue : %s</strong>',
+	'LOG_CONFIG_DIGESTS_EMAILING_FAILURE'					=> '<strong>Impossible d’envoyer le résumé le %1$s à %2$d h UTC. Temps d’exécution : %3$s sur %4$d secondes autorisées. %5$s Mo de mémoire ont été utilisés. Au total %6$u résumés ont été envoyés par courriel, %7$u résumés ont été ignorés et %8$u h ont été traitées avant que générateur de courriels ne soit interrompu.</strong>',
+	'LOG_CONFIG_DIGESTS_EMAILING_SUCCESS'					=> '<strong>Envoi des résumés le %1$s à %2$d h UTC. Temps d’exécution : %3$s sur %4$d secondes autorisées. %5$s Mo de mémoire ont été utilisés. Au total %6$u résumés ont été envoyés par courriel, %7$u résumés ont été ignorés et %8$u h ont été traitées.</strong>',
+	'LOG_CONFIG_DIGESTS_EXCEPTION_ERROR'					=> '<strong>L’exception PHP d’essai/capture suivante est survenue : %s</strong>',
 	'LOG_CONFIG_DIGESTS_FILE_CLOSE_ERROR'					=> '<strong>Impossible de fermer le fichier %s</strong>',
 	'LOG_CONFIG_DIGESTS_FILE_OPEN_ERROR'					=> '<strong>Impossible d’ouvrir gestionnaire de fichier vers le dossier %s. Cela est peut-être dû à permissions insuffisantes. Les permissions de fichier du dossier doivent être réglées en écriture publique (777 sur les systèmes Unix).</strong>',
 	'LOG_CONFIG_DIGESTS_FILE_WRITE_ERROR'					=> '<strong>Impossible d’écrire dans le fichier %s. Cela est peut-être dû à permissions insuffisantes. Les permissions de fichier du dossier doivent être réglées sur écriture publique (777 sur les systèmes Unix).</strong>',
@@ -102,8 +102,8 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_DIGESTS_MANUAL_RUN'							=> '<strong>Demande de lancement manuel du générateur de courriels</strong>',
 	'LOG_CONFIG_DIGESTS_MESSAGE'							=> '<strong>%s</strong>',	// Utilisé pour le débogage général, car il est sinon difficile de corriger des problèmes en mode cron.
 	'LOG_CONFIG_DIGESTS_MASS_SUBSCRIBE_UNSUBSCRIBE'			=> '<strong>Éxécution d’une action d’abonnement ou de désabonnement groupé au résumé</strong>',
-	'LOG_CONFIG_DIGESTS_NO_ALLOWED_FORUMS'					=> '<strong>Attention : l’abonné %s n’a aucune permission sur le forum, dans la mesure où il y a des forums requis, les résumés seront toujours vides.</strong>',
-	'LOG_CONFIG_DIGESTS_NO_BOOKMARKS'						=> '<strong>Attention : l’abonné %s souhaite des sujets cochés dans son résumé, mais il n’a aucun sujet coché.</strong>',
+	'LOG_CONFIG_DIGESTS_NO_ALLOWED_FORUMS'					=> '<strong>Attention : l’abonné %s n’a aucune permission sur le forum, dans la mesure où il y a des forums requis, les résumés seront toujours vides.</strong>',
+	'LOG_CONFIG_DIGESTS_NO_BOOKMARKS'						=> '<strong>Attention : l’abonné %s souhaite des sujets cochés dans son résumé, mais il n’a aucun sujet coché.</strong>',
 	'LOG_CONFIG_DIGESTS_NO_RESOURCES'						=> '<strong>Arrêt anormal du générateur d’envoi des résumés. Les ressources système sont insuffisantes pour continuer à traiter les résumés. Une erreur a été générée lors de la création d’un résumé pour "%1$s" à %2$d UTC. Vous devriez peut-être mettre à niveau votre hébergement pour envoyer les résumés de manière fiable.</strong>',
 	'LOG_CONFIG_DIGESTS_NOTIFICATION_ERROR'					=> '<strong>Impossible d’envoyer une notification par courriel du résumé généré par un administrateur à %s.</strong>',
 	'LOG_CONFIG_DIGESTS_NOTIFICATION_SENT'					=> '<strong>Un courriel a été envoyé à %1$s (%2$s) indiquant que les réglages de son résumé ont été modifiés.</strong>',
