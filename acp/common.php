@@ -113,7 +113,7 @@ $lang = array_merge($lang, array(
 																	1	=>	'%d Utilisateur',
 																	2	=>	'%d Utilisateurs',
 																),
-																	'DIGESTS_LOWERCASE_DIGEST_TYPE'							=> 'Indiquer la fréquence d’envoi du résumé en lettres minuscules',
+	'DIGESTS_LOWERCASE_DIGEST_TYPE'							=> 'Indiquer la fréquence d’envoi du résumé en lettres minuscules',
 	'DIGESTS_LOWERCASE_DIGEST_TYPE_EXPLAIN'					=> 'En Anglais, le titre du résumé sera par exemple « My board name Daily Digest ». Dans certaines langues « Digest Daily » précède le nom du forum. En indiquant Oui, la fréquence du résumé apparaîtra ainsi « Résumé journalier de mon forum », avec la première lettre de la fréquence d’envoi en minuscule.',
 	'DIGESTS_MAILER_RAN_SUCCESSFULLY'						=> 'Le générateur de courriels a été lancé avec succès.',
 	'DIGESTS_MAILER_RAN_WITH_ERROR'							=> 'Une erreur est survenue avec le générateur de courriels. Un ou plusieurs résumés ont pu être générés avec succès. Les journaux d’administration et d’erreurs phpBB peuvent contenir plus d’information.',

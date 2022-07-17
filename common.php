@@ -37,7 +37,7 @@ $lang = array_merge($lang, array(
 	'PLURAL_RULE'						=> 2,
 	
 	'DIGESTS_ALL_FORUMS'				=> 'Tous',
-	'DIGESTS_AM'						=> ' AM', // non utilisé si les formats date/heure ne pemettent pas AM et PM
+	'DIGESTS_AM'						=> ' AM', // non utilisé si les formats date/heure ne pemettent pas AM et PM
 	'DIGESTS_AUTHOR'					=> 'Auteur',
 	'DIGESTS_BAD_SEND_HOUR'				=> 'L’heure d’envoi du résumé de l’utilisateur %1$s est invalide. Il est %2$d. La valeur doit être >= 0 et < 24.',
 	'DIGESTS_BLOCK_IMAGES'				=> 'Bloquer les images',
@@ -50,7 +50,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_COUNT_LIMIT_EXPLAIN'		=> 'Saisissez un nombre supérieur à zéro si vous souhaitez limiter le nombre de messages dans le résumé.',
 	'DIGESTS_DAILY'						=> 'Journalier',
 	'DIGESTS_DATE'						=> 'Date',
-	'DIGESTS_DELIMITER'					=> ' &#8249; ', // Utilisé pour faciliter l'affichage de la hiérarchie des noms de forum depuis l'index jusqu'en bas. Ne devrait pas changer dans les traductions linguistiques, sauf si un caractère différent est utilisé dans le fil d'Ariane.
+	'DIGESTS_DELIMITER'					=> ' ‹ ', // Utilisé pour faciliter l'affichage de la hiérarchie des noms de forum depuis l'index jusqu'en bas. Ne devrait pas changer dans les traductions linguistiques, sauf si un caractère différent est utilisé dans le fil d'Ariane.
 	'DIGESTS_DISABLED_MESSAGE'			=> 'Pour activer les champs, sélectionnez Réglages généraux et sélectionnez le type de résumé',
 		'DIGESTS_DISCLAIMER_HTML'			=> '<p><a href="%5$s">Désabonnement en un clic</a></p><p>Vous pouvez aussi modifier ou supprimer votre abonnement aux forums depuis le <a href="%1$sucp.%3$s">Panneau de contrôle de l’utilisateur</a>.</p><p>Si vous avez des questions ou si vous souhaitez nous contacter veuillez adresser votre courriel au <a href="mailto:%4$s?subject=Digests">webmaster des forums de %2$s</a>.</p>',
 	'DIGESTS_DISCLAIMER_TEXT'			=> 'Désabonnement en un clic : %5$s
@@ -93,7 +93,7 @@ Si vous avez des questions ou si vous souhaitez nous contacter veuillez adresser
 	'DIGESTS_MAX_DISPLAY_WORDS'			=> 'Nombre maximal de mots à afficher dans un message',
 	'DIGESTS_MAX_DISPLAY_WORDS_EXPLAIN'	=> 'Afin d’assurer un rendu cohérent, si un message doit être tronqué le code HTML sera supprimé du message. Saisissez 0 pour autoriser l’affichage intégral du texte du message. Si l’option « N’afficher aucun texte de messages » est cochée, ce champ sera ignoré et aucun texte de message n’apparaîtra dans le résumé.',
 	'DIGESTS_MAX_SIZE'					=> 'Nombre maximal de mots à afficher dans un message',
-	'DIGESTS_MAX_WORDS_NOTIFIER'		=> '... ',
+	'DIGESTS_MAX_WORDS_NOTIFIER'		=> '… ',
 	'DIGESTS_MIN_SIZE'					=> 'Nombre minimal de mots dans un message pour que celui-ci apparaisse dans le résumé',
 	'DIGESTS_MIN_SIZE_EXPLAIN'			=> 'Si vous laissez ce champ avec la valeur 0, tous les messages, quel que soit le nombre de mots qu’ils contiennent, seront inclus dans le résumé.',
 	'DIGESTS_MIN_POPULARITY_VALUE'		=> 'Valeur minimum de popularité',
@@ -116,7 +116,7 @@ Si vous avez des questions ou si vous souhaitez nous contacter veuillez adresser
 	'DIGESTS_ON'						=> 'le',
 	'DIGESTS_OPEN_QUOTE'				=> '« ',
 	'DIGESTS_OPEN_QUOTE_TEXT'			=> '« ',
-	'DIGESTS_PM'						=> ' PM', // non utilisé si les formats date/heure ne pemettent pas AM et PM
+	'DIGESTS_PM'						=> ' PM', // non utilisé si les formats date/heure ne pemettent pas AM et PM
 	'DIGESTS_PM_SUBJECT'				=> 'Sujet du message privé',
 	'DIGESTS_POST_IMAGE_TEXT'			=> '<br>(Cliquez sur l’image pour l’afficher en taille réelle.)',
 	'DIGESTS_POST_TEXT'					=> 'Texte du message',
