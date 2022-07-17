@@ -105,7 +105,7 @@ Si vous avez des questions ou si vous souhaitez nous contacter veuillez adresser
 	'DIGESTS_NO_BOOKMARKED_POSTS'		=> 'Il n’y a pas de nouveaux messages marqués.',
 	'DIGESTS_NO_CONSTRAINT'				=> 'Pas de limitation',
 	'DIGESTS_NO_DETAILS_ERROR'			=> 'La base de données est peut-être incohérente. Aucun enregistrement de résumé détaillé n’a été trouvé pour cette date et cette heure.',
-	'DIGESTS_NO_FORUMS_AVAILABLE'		=> 'Vous nl’avez pas accès aux forums',
+	'DIGESTS_NO_FORUMS_AVAILABLE'		=> 'Vous n’avez pas accès aux forums',
 	'DIGESTS_NO_FORUMS_CHECKED' 		=> 'Au moins un forum doit être coché',
 	'DIGESTS_NO_LIMIT'					=> 'Pas de limitation',
 	'DIGESTS_NO_POSTS'					=> 'Il n’y a pas de nouveaux messages.',
