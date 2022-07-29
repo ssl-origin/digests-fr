@@ -1,4 +1,4 @@
-# digests-fr
+# digests-fr 3.3.16
 Extension Digests pour phpBB
 Traduction française : https://github.com/bonnaphil/digests-fr
 Traduction tchèque : https://github.com/petr-hendl/phpBBDigests-cs/
