@@ -1,9 +1,9 @@
 Bonjour {{ USERNAME }},
 
-Ce message est destiné à vous prévenir qu'un administrateur du forum {{ FORUM_NAME }} a modifié les réglages de votre résumé. Pour visualiser vos nouveaux réglages, utilisez le lien ci-dessous et cliquez sur le lien du résumé :
+Ce message vous informe qu’un administrateur du forum {{ FORUM_NAME }} a modifié vos réglages de résumés. Pour visualiser vos nouveaux réglages, utilisez le lien suivant, puis sélectionnez l’onglet « Résumés » :
 
 {{ DIGESTS_UCP_LINK }}
 
 Cordialement,
 
-L'équipe d'administration du forum {{ FORUM_NAME }}
+L’équipe d’administration du forum {{ FORUM_NAME }}
