@@ -81,7 +81,7 @@ Si vous avez des questions ou souhaitez nous contacter, veuillez adresser votre 
 	'DIGESTS_FREQUENCY_EXPLAIN'			=> 'Les résumés hebdomadaires sont envoyés le %s. Les résumés mensuels sont envoyés le premier du mois. Le temps universel coordonné (UTC) est utilisé pour déterminer le jour de la semaine.',
 	'DIGESTS_FREQUENCY_SHORT'			=> 'Type de résumé',
 	'DIGESTS_HOURS_ABBREVIATION' 		=> ' h',	// cf. : http://www.scienceeditingexperts.com/which-is-the-correct-abbreviation-for-hours-2h-2-h-2hs-2-hs-2hrs-or-2-hrs, DIGESTS_AM and DIGESTS_PM sont sinon utilisés si spécifié dans user_dateformat
-	'DIGESTS_INSTALL_REQUIREMENTS'		=> 'Votre version de PHP doit être > 3.3.0 et < 4.0 pour installer cette extension. Veuillez résoudre ce problème, puis réessayer d’activer l’extension.',
+	'DIGESTS_INSTALL_REQUIREMENTS'		=> 'Votre version de phpBB doit être > 3.3.0 et < 4.0 pour installer cette extension. Veuillez résoudre ce problème, puis réessayer d’activer l’extension.',
 	'DIGESTS_INTRODUCTION' 				=> 'Voici le résumé des derniers messages publiés sur les forums de %s. <em>Ne répondez pas</em> à ce courriel pour répondre aux sujets, messages ou messages privés. <em>Veuillez plutôt vous rendre sur le forum</em> pour rejoindre la discussion ! En cas de problème d’affichage du résumé, assurez-vous de bien avoir chargé tout le contenu distant.',
 	'DIGESTS_JUMP_TO_MSG'				=> 'Id Msg',
 	'DIGESTS_JUMP_TO_POST'				=> 'Id Post',
