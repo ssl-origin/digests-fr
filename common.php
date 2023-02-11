@@ -166,7 +166,7 @@ Si vous avez des questions ou souhaitez nous contacter, veuillez adresser votre 
 	'DIGESTS_TITLE'						=> 'Résumés',
 	'DIGESTS_TRANSLATED_BY'				=> 'Traduit par',
 	'DIGESTS_TRANSLATOR_NAME'			=> 'Philippe Bonnaure - www.macvf.fr',	// Leave null string to suppress translator name
-	'DIGESTS_TRANSLATOR_CONTACT'		=> 'https://www.macvf.fr',	// Leave null string to suppress contact info, if used use: mailto:name@emailaddress.com or a URL if you have a website.
+	'DIGESTS_TRANSLATOR_CONTACT'		=> 'https://www.macvf.fr',	// Leave null string to suppress contact info, if used, use: mailto:name@emailaddress.com or a URL if you have a website.
 	'DIGESTS_TOC'						=> 'Sommaire',
 	'DIGESTS_TOC_EXPLAIN'				=> 'Si le forum est très actif, vous pouvez inclure un sommaire dans votre résumé. Dans les résumés formatés, le sommaire comporte des liens qui permettent d’aller à un message en particulier ou à un message privé dans le résumé.',
 	'DIGESTS_UNKNOWN'					=> 'Inconnu',
