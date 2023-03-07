@@ -90,7 +90,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_ENABLE_SUBSCRIBE_UNSUBSCRIBE'					=> 'Activer l’abonnement ou le désabonnement global d’utilisateurs',
 	'DIGESTS_ENABLE_SUBSCRIBE_UNSUBSCRIBE_EXPLAIN'			=> 'Si vous choisissez Oui, lorsque vous cliquerez sur le bouton Envoyer, une action d’abonnement ou de désabonnement global d’utilisateurs va être déclenchée. Activez cette option avec précaution !',
 	'DIGESTS_EXCLUDE_FORUMS'								=> 'Toujours exclure les forums suivants',
-	'DIGESTS_EXCLUDE_FORUMS_EXPLAIN'						=> 'Saisissez le forum_id des forums qui ne doivent pas figurer dans le résumé. Séparez les forum_ids par des virgules. En indiquant 0, aucun forum ne sera exclu. Le forum_id d’un forum correspond à la valeur du paramètre « f » dans le champ de l’URL. Exemple : https://www.example.com/phpBB3/viewforum.php?f=1. N’utilisez pas de forum_ids qui correspondent à des catégories. <i>Ce réglage est ignoré si l’option « Sujets cochés uniquement » est activée par l’utilisateur.</i>',
+	'DIGESTS_EXCLUDE_FORUMS_EXPLAIN'						=> 'Saisissez le forum_id des forums qui ne doivent pas figurer dans le résumé. Séparez les forum_ids par des virgules. En indiquant 0, aucun forum ne sera exclu. Le forum_id d’un forum correspond à la valeur du paramètre « f » dans le champ de l’URL. Exemple : https://www.example.com/phpBB3/viewforum.php?f=1. N’utilisez pas de forum_ids qui correspondent à des catégories. <i>Ce réglage est ignoré si l’option « Sujets en Favoris uniquement » est activée par l’utilisateur.</i>',
 	'DIGESTS_EXECUTION_TIME'								=> 'Temps d’exécution (secondes)',
 	'DIGESTS_EXPAND'										=> 'Agrandir les paramètres du résumé de l’utilisateur',
 	'DIGESTS_FREQUENCY_EXPLAIN'								=> 'Les résumés hebdomadaires sont envoyés le jour de la semaine défini dans les réglages généraux de Digests. Les résumés mensuels sont envoyés le premier du mois. Le Temps Universel Coordonné (UTC) est utilisé pour déterminer le jour de la semaine.',
@@ -107,7 +107,7 @@ $lang = array_merge($lang, array(
 	'DIGESTS_INCLUDE_ADMINS'								=> 'Inclure les administrateurs',
 	'DIGESTS_INCLUDE_ADMINS_EXPLAIN'						=> 'Permet d’abonner ou de désabonner les administrateurs en complément des autres membres.',
 	'DIGESTS_INCLUDE_FORUMS'								=> 'Toujours inclure les forums suivants',
-	'DIGESTS_INCLUDE_FORUMS_EXPLAIN'						=> 'Saisissez le forum_id des forums qui doivent figurer dans le résumé. Séparez les forum_ids par des virgules. En indiquant 0, aucun forum ne sera inclus. Le forum_id d’un forum correspond à la valeur du paramètre « f » dans le champ de l’URL. Exemple : https://www.example.com/phpBB3/viewforum.php?f=1. N’utilisez pas de forum_ids qui correspondent à des catégories. <i>Ce réglage est ignoré si l’option « Sujets cochés uniquement » est activée par l’utilisateur.</i>',
+	'DIGESTS_INCLUDE_FORUMS_EXPLAIN'						=> 'Saisissez le forum_id des forums qui doivent figurer dans le résumé. Séparez les forum_ids par des virgules. En indiquant 0, aucun forum ne sera inclus. Le forum_id d’un forum correspond à la valeur du paramètre « f » dans le champ de l’URL. Exemple : https://www.example.com/phpBB3/viewforum.php?f=1. N’utilisez pas de forum_ids qui correspondent à des catégories. <i>Ce réglage est ignoré si l’option « Sujets en Favoris uniquement » est activée par l’utilisateur.</i>',
 	'DIGESTS_LAST_SENT'										=> 'Dernier résumé envoyé',
 	'DIGESTS_LIST_USERS' 								=> array(
 																	1	=>	'%d Utilisateur',

@@ -1,4 +1,4 @@
-# digests-fr 3.3.18 (11/02/2023)
+# digests-fr 3.3.18 (MàJ-1) (07/03/2023)
 
 Extension Digests pour phpBB
 Traduction française 2017-2023 : Philippe Bonnaure (www.macvf.fr)
